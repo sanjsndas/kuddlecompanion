@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Cookies Policy | Kuddle Companion Nest</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #faf3e8;
+            color: #3e2a1f;
+            line-height: 1.6;
+        }
+
+        /* Brown Theme (consistent with privacy & contact) */
+        :root {
+            --brown-dark: #4a2c1a;
+            --brown-medium: #7a4b2c;
+            --brown-light: #c49a6c;
+            --brown-pale: #e7d6bf;
+            --cream: #fff9f0;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--brown-dark), var(--brown-medium));
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 5px solid #dbb87c;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+
+        nav {
+            background-color: var(--brown-dark);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 1rem;
+            list-style: none;
+        }
+
+        nav a {
+            color: #f7e9d7;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd966;
+            transform: scale(1.05);
+        }
+
+        .hero {
+            background-image: url('https://place-puppy.com/1200x400?text=Cookies+%26+Your+Privacy+%F0%9F%8D%AA%E2%9D%A4%EF%B8%8F');
+            background-size: cover;
+            background-position: center;
+            height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 6px black;
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-align: center;
+            background-color: #8b5a2b;
+            background-blend-mode: overlay;
+        }
+
+        .hero span {
+            background: rgba(0,0,0,0.6);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.3rem;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 2rem auto;
+            padding: 0 24px;
+        }
+
+        /* Policy card layout */
+        .policy-card {
+            background: var(--cream);
+            border-radius: 32px;
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.05);
+            padding: 2rem 2.2rem;
+            border: 1px solid rgba(122, 75, 44, 0.15);
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.9rem;
+            color: var(--brown-dark);
+            border-left: 7px solid var(--brown-light);
+            padding-left: 1rem;
+            margin: 1.5rem 0 1rem 0;
+            font-weight: 700;
+        }
+
+        .section-title:first-of-type {
+            margin-top: 0;
+        }
+
+        .policy-intro {
+            font-size: 1.1rem;
+            background: #f8efde;
+            padding: 1.2rem 1.8rem;
+            border-radius: 28px;
+            margin-bottom: 1.8rem;
+            border-left: 4px solid var(--brown-light);
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: var(--brown-medium);
+            margin: 1.2rem 0 0.6rem 0;
+            font-weight: 600;
+        }
+
+        p, li {
+            color: #3e2a1f;
+            margin-bottom: 0.75rem;
+        }
+
+        ul, ol {
+            margin: 0.75rem 0 1rem 1.8rem;
+        }
+
+        li {
+            margin-bottom: 0.4rem;
+        }
+
+        .highlight-badge {
+            background: var(--brown-pale);
+            border-radius: 40px;
+            padding: 0.2rem 1rem;
+            display: inline-block;
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: var(--brown-dark);
+            margin-right: 0.5rem;
+        }
+
+        .cookie-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.2rem 0;
+            background: #fef6ec;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+        .cookie-table th, .cookie-table td {
+            border: 1px solid #e2cfb5;
+            padding: 12px 15px;
+            text-align: left;
+            vertical-align: top;
+        }
+        .cookie-table th {
+            background-color: var(--brown-pale);
+            color: var(--brown-dark);
+            font-weight: 700;
+        }
+        .cookie-table tr:nth-child(even) {
+            background-color: #fff6ed;
+        }
+
+        .badge-preference {
+            background: #e0d1bf;
+            border-radius: 30px;
+            padding: 0.2rem 0.9rem;
+            font-size: 0.75rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-right: 0.5rem;
+            color: #3e2a1f;
+        }
+
+        .consent-box {
+            background: #f2e4d4;
+            border-radius: 28px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.5rem 0;
+            border-left: 8px solid var(--brown-light);
+        }
+
+        .button-cookie {
+            background-color: var(--brown-medium);
+            color: white;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+            font-size: 0.9rem;
+            margin-right: 0.8rem;
+            margin-top: 0.5rem;
+            display: inline-block;
+        }
+        .button-cookie:hover {
+            background-color: var(--brown-dark);
+            transform: scale(1.02);
+        }
+
+        .effective-date {
+            text-align: right;
+            font-style: italic;
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e2cfb5;
+            font-size: 0.9rem;
+        }
+
+        .footer {
+            background-color: var(--brown-dark);
+            color: #f0e2d0;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 2rem;
+            border-top: 6px solid #e6bc86;
+        }
+
+        .footer p {
+            margin: 0.5rem 0;
+        }
+
+        .footer a {
+            color: #ffdd99;
+            text-decoration: none;
+        }
+
+        @media (max-width: 720px) {
+            header h1 { font-size: 1.8rem; }
+            .hero { height: 200px; font-size: 1rem; }
+            .hero span { font-size: 1rem; padding: 0.6rem 1.2rem; }
+            .section-title { font-size: 1.6rem; }
+            .policy-card { padding: 1.5rem; }
+            h3 { font-size: 1.25rem; }
+            .cookie-table th, .cookie-table td { padding: 8px 10px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🐾 Kuddle Companion Nest</h1>
+    <p>Where every paw finds love, care & a cozy nest</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="terms.html">Terms Of Privacy</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="cookies.html">Cookies Policy</a>
+</nav>
+
+<div class="hero">
+    <span>🍪 Tasty Cookies? We Prefer Transparency & Choice! 🐕</span>
+</div>
+
+<div class="container">
+    <div class="policy-card">
+        <div class="policy-intro">
+            🍪 At <strong>Kuddle Companion Nest</strong>, we use cookies and similar tracking technologies to make your experience smoother, safer, and more personal — just like the perfect dog treat. This Cookie Policy explains what cookies are, how we use them, your choices, and how you can manage your preferences. By continuing to browse our website, you agree to our use of cookies as described, unless you have set your browser to reject them.
+        </div>
+
+        <h2 class="section-title" id="what-are-cookies">📌 What Are Cookies?</h2>
+        <p>Cookies are small text files placed on your device (computer, smartphone, or tablet) when you visit a website. They help the website recognize your device, remember your preferences, and improve functionality. Cookies are widely used to make websites work efficiently and provide analytical insights. Think of them as tiny helpers that remember your favorite pet treats or keep you logged into your adoption profile.</p>
+
+        <h2 class="section-title" id="how-we-use">🍪 How We Use Cookies</h2>
+        <p>Kuddle Companion Nest uses cookies for several essential and optional purposes:</p>
+        <ul>
+            <li><span class="highlight-badge">✅ Essential</span> To enable core functionality like secure login, appointment booking, shopping cart for pet supplies, and form submissions.</li>
+            <li><span class="highlight-badge">📊 Performance & Analytics</span> To understand how visitors interact with our website (most visited pages, adoption trends, popular breeds) so we can improve content and user experience.</li>
+            <li><span class="highlight-badge">🎨 Functionality</span> To remember your preferences (language, region, font size, or favorite pet profiles).</li>
+            <li><span class="highlight-badge">🎯 Targeting/Advertising</span> To show you relevant pet-care ads, promotions, or rescue event updates (only with your consent where required).</li>
+        </ul>
+
+        <h2 class="section-title" id="cookie-list">📋 Specific Cookies We Use</h2>
+        <p>Below is a detailed list of the main cookies used on our website, categorized by type and purpose. We respect your privacy and only deploy non-essential cookies after obtaining your consent via our cookie banner.</p>
+        
+        <table class="cookie-table">
+            <thead>
+                <tr><th>Cookie Name</th><th>Purpose</th><th>Duration</th><th>Type</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>kuddle_session</td><td>Maintains your session while navigating the site (e.g., keeps you logged in to your nest dashboard).</td><td>Session</td><td>Essential</td></tr>
+                <tr><td>csrf_token</td><td>Security cookie that protects against cross-site request forgery attacks during form submissions (adoption or contact).</td><td>Session</td><td>Essential</td></tr>
+                <tr><td>user_preferences</td><td>Stores your preferred language, text size, and pet filter settings (dog/cat/rabbit).</td><td>12 months</td><td>Functional</td></tr>
+                <tr><td>_ga (Google Analytics)</td><td>Used to distinguish unique users and understand traffic sources, helping us improve our content for pet lovers.</td><td>2 years</td><td>Analytics (Opt-in)</td></tr>
+                <tr><td>_gid</td><td>Helps track user interactions and page visits over a short period.</td><td>24 hours</td><td>Analytics (Opt-in)</td></tr>
+                <tr><td>kuddle_adopt_recommend</td><td>Remembers your recently viewed pet profiles to show tailored adoption suggestions.</td><td>30 days</td><td>Functionality</td></tr>
+                <tr><td>kuddle_cookie_consent</td><td>Stores your cookie preference (allow all, necessary only, or personalized).</td><td>12 months</td><td>Essential</td></tr>
+            </tbody>
+        </table>
+        <p>Note: Third-party services integrated into our website (like YouTube pet care videos, map widgets, or donation platforms) may also place cookies. We do not control those cookies directly; please check the respective third-party privacy policies for details.</p>
+        
+        <h2 class="section-title" id="consent">⚖️ Your Consent & Control</h2>
+        <p>When you first visit Kuddle Companion Nest, a cookie banner will appear, allowing you to accept all cookies, reject non-essential ones, or customize your preferences. You can change your mind at any time. Here's how:</p>
+        <div class="consent-box">
+            <p>🐕 <strong>Manage via Cookie Settings:</strong> Click the "Cookie Preferences" link in our website footer to reopen the consent tool and adjust your choices (except essential cookies).</p>
+            <p>🌍 <strong>Browser Controls:</strong> Most web browsers allow you to block or delete cookies through their settings. However, disabling essential cookies may affect functionality such as login or appointment scheduling.</p>
+            <p>📧 <strong>Global Opt-Out:</strong> For targeted advertising cookies, you can also opt out via industry programs like YourOnlineChoices (EU) or the NAI (US).</p>
+            <button class="button-cookie" id="simulatePrefBtn">🍪 Show Cookie Preferences Panel (Demo)</button>
+            <div id="demoPrefPanel" style="display: none; margin-top: 1rem; background: white; border-radius: 24px; padding: 1rem; border: 1px solid #c49a6c;">
+                <p><strong>Customize your cookie preferences</strong></p>
+                <label style="display: block;"><input type="checkbox" disabled checked> ✅ Essential cookies (always active)</label>
+                <label style="display: block;"><input type="checkbox" id="demoFunctional"> 🧸 Functional & personalization cookies</label>
+                <label style="display: block;"><input type="checkbox" id="demoAnalytics"> 📈 Analytics cookies (improve our content)</label>
+                <label style="display: block;"><input type="checkbox" id="demoMarketing"> 🎯 Advertising & social cookies</label>
+                <button class="button-cookie" id="saveDemoPref" style="margin-top: 0.8rem; background: #7a4b2c;">Save preferences (simulation)</button>
+                <p id="prefFeedback" style="font-size: 0.8rem; margin-top: 0.6rem;"></p>
+            </div>
+        </div>
+        
+        <h2 class="section-title" id="third-party">🔗 Third-Party Cookies & Partners</h2>
+        <p>To enrich your experience, we include trusted third-party tools that set their own cookies:</p>
+        <ul>
+            <li><strong>🐾 Google Analytics:</strong> Helps analyze traffic and user behavior — anonymized data. Opt-out via <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" style="color:#7a4b2c;">Google Analytics Opt-out Browser Add-on</a>.</li>
+            <li><strong>🐶 Petfinder / Shelter API:</strong> If you browse adoptable pets from partners, those embedded tools may use cookies to personalize listings.</li>
+            <li><strong>📹 YouTube:</strong> Embedded pet care videos may set cookies to remember preferences and gather usage stats.</li>
+            <li><strong>💳 Payment Processors (Stripe/PayPal):</strong> When you adopt, donate, or purchase supplies, payment gateways use necessary cookies for security and fraud prevention.</li>
+        </ul>
+        <p>We recommend reviewing the privacy policies of these partners for more detailed information about their cookie practices.</p>
+        
+        <h2 class="section-title" id="updates">🔄 Updates to This Cookie Policy</h2>
+        <p>We may update this Cookie Policy occasionally to reflect changes in technology, legal requirements, or our operational needs. The “Last Updated” date at the bottom indicates when the latest changes were made. If we make material modifications, we will notify you through our website or via email (if applicable). Your continued use of Kuddle Companion Nest after the effective date constitutes acceptance of the revised policy.</p>
+        
+        <h2 class="section-title" id="contact-cookies">📞 Contact Us About Cookies</h2>
+        <p>If you have any questions regarding our use of cookies or would like to exercise your privacy choices, feel free to reach out to our Data Protection Team:</p>
+        <ul>
+            <li>📧 Email: <strong>cookies@kuddlenest.com</strong> (or privacy@kuddlenest.com)</li>
+            <li>📞 Phone: <strong>+1 (555) 123-4567</strong> (ext. 204 for privacy inquiries)</li>
+            <li>🐕 Postal: 123 Pet Lane, Pawville, PV 90210, United States — Attn: Cookie Compliance</li>
+        </ul>
+        
+        <div class="effective-date">
+            🍪 Last Updated: April 20, 2025 | Effective as of: May 1, 2025<br>
+            🐾 <strong>Kuddle Companion Nest</strong> — your data, served with care.
+        </div>
+
+        <!-- additional interactive reassurance -->
+        <div style="margin-top: 2rem; background: #f7ede1; border-radius: 28px; padding: 1.2rem 1.5rem; text-align: center;">
+            <p style="font-weight: 500;">⭐ We’re committed to transparency — cookies help us build a better nest for you and your furry family. You're always in control.</p>
+            <p style="font-size: 0.9rem;">🔐 Want to delete existing cookies? You can clear them via your browser settings anytime. Need assistance? Our support team is just a woof away!</p>
+        </div>
+    </div>
+
+    <!-- Additional block mirroring privacy page style: right to manage cookies -->
+    <div class="policy-card" style="background: #fcf7ef;">
+        <h2 class="section-title">🍪 Your Cookie Choices at a Glance</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-between;">
+            <div style="flex:1; min-width: 180px;">
+                <h3 style="margin-top: 0;">🛠️ Browser Settings</h3>
+                <p>You can configure your browser to block third-party cookies, delete existing ones, or alert you when cookies are set. See <strong>“Help”</strong> section in Chrome, Firefox, Safari, Edge.</p>
+            </div>
+            <div style="flex:1; min-width: 180px;">
+                <h3 style="margin-top: 0;">⚙️ Opt-Out Tools</h3>
+                <p>Visit <a href="https://optout.aboutads.info" target="_blank" style="color:#7a4b2c;">NAI Opt-Out</a> or <a href="https://www.youronlinechoices.com" target="_blank" style="color:#7a4b2c;">YourOnlineChoices</a> to manage interest-based advertising cookies across many networks.</p>
+            </div>
+            <div style="flex:1; min-width: 180px;">
+                <h3 style="margin-top: 0;">📧 Email Unsubscribe</h3>
+                <p>Newsletter tracking cookies are linked to our emails — you can unsubscribe from marketing lists to disable tracking pixels.</p>
+            </div>
+        </div>
+        <p style="margin-top: 1.2rem; font-size: 0.9rem; border-top: 1px solid #e2cfb5; padding-top: 1rem;">✨ For more information about general data processing, please read our <a href="privacy.html" style="color:#7a4b2c; font-weight: bold;">Privacy Policy</a>. Together we build a trusted pet community.</p>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>🐾 <strong>Kuddle Companion Nest</strong> — Your trusted partner in compassionate pet care</p>
+    <p>📞 Phone: <a href="tel:+15551234567">+1 (555) 123-4567</a> (24/7 Pet Helpline)</p>
+    <p>📍 Address: 123 Pet Lane, Pawville, PV 90210, United States</p>
+    <p>✉️ Email: hello@kuddlenest.com | 🕒 Mon-Sat: 9am - 8pm | Sun: 10am - 4pm</p>
+    <p style="margin-top: 1rem; font-size: 0.8rem;">© 2025 Kuddle Companion Nest — Every nest deserves a kuddle 🐶🐱 | <a href="privacy.html">Privacy Policy</a> | <a href="cookies.html">Cookies Policy</a></p>
+</footer>
+
+<!-- Smooth scroll + interactive demo preference panel -->
+<script>
+    // smooth scroll for internal hash links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if (targetId && targetId !== '#' && targetId.startsWith('#')) {
+                e.preventDefault();
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+        });
+    });
+
+    // Demo cookie preferences panel toggle
+    const prefBtn = document.getElementById('simulatePrefBtn');
+    const prefPanel = document.getElementById('demoPrefPanel');
+    if (prefBtn) {
+        prefBtn.addEventListener('click', () => {
+            if (prefPanel.style.display === 'none' || getComputedStyle(prefPanel).display === 'none') {
+                prefPanel.style.display = 'block';
+            } else {
+                prefPanel.style.display = 'none';
+            }
+        });
+    }
+
+    const saveDemoBtn = document.getElementById('saveDemoPref');
+    if (saveDemoBtn) {
+        saveDemoBtn.addEventListener('click', () => {
+            const functional = document.getElementById('demoFunctional').checked ? 'enabled' : 'disabled';
+            const analytics = document.getElementById('demoAnalytics').checked ? 'enabled' : 'disabled';
+            const marketing = document.getElementById('demoMarketing').checked ? 'enabled' : 'disabled';
+            const feedback = document.getElementById('prefFeedback');
+            if (feedback) {
+                feedback.innerHTML = `✅ Demo preferences saved: Functional ${functional}, Analytics ${analytics}, Marketing ${marketing}. <br>Note: This is a simulation — real consent stored via cookie banner.`;
+                feedback.style.color = '#4a2c1a';
+                setTimeout(() => {
+                    feedback.innerHTML = '';
+                }, 4000);
+            }
+            // Also optionally set a localStorage flag to simulate
+            localStorage.setItem('demoCookiePrefs', JSON.stringify({ functional, analytics, marketing }));
+        });
+    }
+    
+    // Simulate cookie consent message if needed (just UX friendly)
+    console.log('🍪 Cookie Policy page with interactive demo ready');
+</script>
+</body>
+</html>

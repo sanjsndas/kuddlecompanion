@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Contact Us | Kuddle Companion Nest</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #faf3e8;
+            color: #3e2a1f;
+            line-height: 1.6;
+        }
+
+        /* Brown Theme (identical to index) */
+        :root {
+            --brown-dark: #4a2c1a;
+            --brown-medium: #7a4b2c;
+            --brown-light: #c49a6c;
+            --brown-pale: #e7d6bf;
+            --cream: #fff9f0;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--brown-dark), var(--brown-medium));
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 5px solid #dbb87c;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+
+        nav {
+            background-color: var(--brown-dark);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 1rem;
+            list-style: none;
+        }
+
+        nav a {
+            color: #f7e9d7;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd966;
+            transform: scale(1.05);
+        }
+
+        .hero {
+            background-image: url('https://place-puppy.com/1200x400?text=We+Love+to+Hear+From+You');
+            background-size: cover;
+            background-position: center;
+            height: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 6px black;
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-align: center;
+            background-color: #8b5a2b;
+            background-blend-mode: overlay;
+        }
+
+        .hero span {
+            background: rgba(0,0,0,0.6);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.4rem;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 2rem auto;
+            padding: 0 24px;
+        }
+
+        /* Contact specific layout */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 800px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        .info-card, .form-card {
+            background: var(--cream);
+            border-radius: 28px;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+            overflow: hidden;
+            border: 1px solid rgba(122, 75, 44, 0.15);
+            transition: all 0.2s ease;
+        }
+
+        .info-card {
+            padding: 1.8rem 2rem;
+        }
+
+        .form-card {
+            padding: 1.8rem 2rem;
+        }
+
+        .section-title {
+            font-size: 1.9rem;
+            color: var(--brown-dark);
+            border-left: 7px solid var(--brown-light);
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .contact-detail-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.8rem;
+            border-bottom: 1px dashed #e2cfb5;
+            padding-bottom: 1.2rem;
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            background: var(--brown-pale);
+            width: 52px;
+            height: 52px;
+            border-radius: 60px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-text h3 {
+            font-size: 1.3rem;
+            color: var(--brown-medium);
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-text p, .contact-text a {
+            color: #2f241b;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .contact-text a:hover {
+            color: var(--brown-light);
+            text-decoration: underline;
+        }
+
+        .social-row {
+            margin-top: 1.5rem;
+            display: flex;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+
+        .social-icon {
+            background: #e9dbc9;
+            padding: 0.5rem 1rem;
+            border-radius: 40px;
+            font-weight: 600;
+            color: var(--brown-dark);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: 0.2s;
+        }
+
+        .social-icon:hover {
+            background: var(--brown-light);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Form styling */
+        .form-group {
+            margin-bottom: 1.4rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--brown-dark);
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: 36px;
+            border: 1px solid #d4bc9a;
+            background-color: #fffef8;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: 0.2s;
+        }
+
+        textarea {
+            border-radius: 24px;
+            resize: vertical;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--brown-medium);
+            box-shadow: 0 0 0 3px rgba(122, 75, 44, 0.2);
+        }
+
+        .btn-submit {
+            background: var(--brown-medium);
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: 0.25s;
+            width: 100%;
+            max-width: 220px;
+            display: inline-block;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-submit:hover {
+            background: var(--brown-dark);
+            transform: scale(1.02);
+            box-shadow: 0 8px 18px rgba(74,44,26,0.2);
+        }
+
+        .note-message {
+            font-size: 0.85rem;
+            color: #6f4f2e;
+            margin-top: 1rem;
+            text-align: center;
+            background: #f9efdf;
+            padding: 0.8rem;
+            border-radius: 60px;
+        }
+
+        .map-container {
+            margin-top: 2rem;
+            background: var(--cream);
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+        }
+
+        .map-frame {
+            width: 100%;
+            height: 320px;
+            background: #cfbc9f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2c1a10;
+            font-weight: bold;
+            background-image: url('https://place-puppy.com/800/400?text=Pet+Friendly+Location+Map');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .map-caption {
+            text-align: center;
+            padding: 0.8rem;
+            font-weight: 500;
+            background: #fdf5ea;
+        }
+
+        .footer {
+            background-color: var(--brown-dark);
+            color: #f0e2d0;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            border-top: 6px solid #e6bc86;
+        }
+
+        .footer p {
+            margin: 0.5rem 0;
+        }
+
+        .footer a {
+            color: #ffdd99;
+            text-decoration: none;
+        }
+
+        @media (max-width: 640px) {
+            header h1 { font-size: 1.8rem; }
+            .hero { height: 200px; font-size: 1rem; }
+            .hero span { font-size: 1rem; padding: 0.6rem 1.2rem; }
+            .section-title { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🐾 Kuddle Companion Nest</h1>
+    <p>Where every paw finds love, care & a cozy nest</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="terms.html">Terms Of Privacy</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="cookies.html">Cookies Policy</a>
+</nav>
+
+<div class="hero">
+    <span>📬 Let’s Chat — We’re All Ears (and Paws!) 🐾</span>
+</div>
+
+<div class="container">
+    <div class="contact-grid">
+        <!-- LEFT COLUMN: contact info + socials + helpline -->
+        <div class="info-card">
+            <h2 class="section-title">🐕‍🦺 Reach Out to Our Nest</h2>
+            <div class="contact-detail-item">
+                <div class="contact-icon">📍</div>
+                <div class="contact-text">
+                    <h3>Visit Our Cozy Headquarters</h3>
+                    <p>123 Pet Lane, Pawville, PV 90210<br>United States (Open map below)</p>
+                </div>
+            </div>
+            <div class="contact-detail-item">
+                <div class="contact-icon">📞</div>
+                <div class="contact-text">
+                    <h3>24/7 Pet Helpline & Support</h3>
+                    <p><a href="tel:+15551234567">+1 (555) 123-4567</a> (Emergency & General)</p>
+                    <p style="font-size:0.85rem;">🕒 Veterinary triage available 24/7</p>
+                </div>
+            </div>
+            <div class="contact-detail-item">
+                <div class="contact-icon">✉️</div>
+                <div class="contact-text">
+                    <h3>Email Our Care Team</h3>
+                    <p><a href="mailto:hello@kuddlenest.com">hello@kuddlenest.com</a> (reply within 12h)<br>
+                    <a href="mailto:veterinary@kuddlenest.com">veterinary@kuddlenest.com</a> (medical concerns)</p>
+                </div>
+            </div>
+            <div class="contact-detail-item">
+                <div class="contact-icon">📱</div>
+                <div class="contact-text">
+                    <h3>Business Hours</h3>
+                    <p>Mon - Fri: 8:00 AM – 8:00 PM (EST)<br>
+                    Saturday: 9:00 AM – 6:00 PM<br>
+                    Sunday & Holidays: 10:00 AM – 4:00 PM (emergency only after hours)</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 1rem;">
+                <h3 style="color: #4a2c1a; margin-bottom: 12px;">🐾 Follow the Fluffy Trail</h3>
+                <div class="social-row">
+                    <a href="#" class="social-icon">📘 Facebook</a>
+                    <a href="#" class="social-icon">📸 Instagram</a>
+                    <a href="#" class="social-icon">🐦 Twitter</a>
+                    <a href="#" class="social-icon">🎵 TikTok</a>
+                    <a href="#" class="social-icon">▶️ YouTube</a>
+                </div>
+                <p style="margin-top: 16px; font-size: 0.9rem;">#KuddleNest – share your happy pet moments with us!</p>
+            </div>
+        </div>
+
+        <!-- RIGHT COLUMN: interactive contact form -->
+        <div class="form-card">
+            <h2 class="section-title">✨ Send a Wag & Message</h2>
+            <form action="#" method="post" id="contactForm">
+                <div class="form-group">
+                    <label for="fullname">Your name *</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="e.g., Emma Watson" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address *</label>
+                    <input type="email" id="email" name="email" placeholder="hello@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="pettype">I'm a pet parent of...</label>
+                    <select id="pettype" name="pettype">
+                        <option value="dog">🐕 Dog(s)</option>
+                        <option value="cat">🐈 Cat(s)</option>
+                        <option value="both">🐶🐱 Both dogs & cats</option>
+                        <option value="other">🐹 Small pets / other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject *</label>
+                    <input type="text" id="subject" name="subject" placeholder="Adoption, grooming, health question..." required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message / Paw-some inquiry *</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell us how we can help your furry companion — we're all ears! 🐾" required></textarea>
+                </div>
+                <div style="display: flex; justify-content: flex-start;">
+                    <button type="submit" class="btn-submit">🐕 Send Message</button>
+                </div>
+                <div class="note-message">
+                    ⭐ We reply within 24 hours (often faster). Your info stays private — no spam, only treats & tips.
+                </div>
+            </form>
+            <!-- simple demo feedback message -->
+            <div id="formFeedback" style="margin-top: 1rem; text-align: center; font-weight: 500;"></div>
+        </div>
+    </div>
+
+    <!-- Map location & additional pet care support text -->
+    <div class="map-container">
+        <div class="map-frame" aria-label="map showing Kuddle Companion Nest location">
+            <!-- Stylized mock map with image + text overlay for charm -->
+            <div style="background: rgba(58, 38, 22, 0.7); color: #FCE9CF; padding: 1rem; text-align: center; width: 100%;">
+                🗺️ 123 Pet Lane, Pawville — Our doors are always open to rescue tails & happy paws.<br>
+                <span style="font-size:0.8rem;">📍 Free parking • Pet-friendly garden • Wheelchair accessible</span>
+            </div>
+        </div>
+        <div class="map-caption">
+            🐾 Come visit our adoption center & boutique — Mondays are "Cuddle & Coffee" mornings!
+        </div>
+    </div>
+
+    <!-- Extra content block to align with site's rich informational style (but still contact related) -->
+    <div class="info-card" style="margin-top: 2rem; padding: 1.8rem;">
+        <h2 class="section-title">💬 Frequently Asked (Paw) Questions</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-between;">
+            <div style="flex:1; min-width: 200px;">
+                <h3 style="color:#7a4b2c;">🏡 Do you offer boarding?</h3>
+                <p>Yes! Our Kuddle Nest boarding includes 24/7 supervision, play areas, and webcam access. Contact us for rates and availability.</p>
+                <h3 style="color:#7a4b2c; margin-top: 1rem;">🐾 Can I volunteer?</h3>
+                <p>Absolutely — we welcome volunteers for socializing, walking, and events. Fill out the form and mention 'volunteer'!</p>
+            </div>
+            <div style="flex:1; min-width: 200px;">
+                <h3 style="color:#7a4b2c;">🚑 Emergency help?</h3>
+                <p>Call our helpline +1 (555) 123-4567 — we will connect you to nearest 24hr emergency vet or guide first aid steps.</p>
+                <h3 style="color:#7a4b2c; margin-top: 1rem;">📦 Do you ship supplies?</h3>
+                <p>Yes! Organic treats, calming beds & enrichment toys delivered nationwide. Check our online shop (coming soon).</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>🐾 <strong>Kuddle Companion Nest</strong> — Your trusted partner in compassionate pet care</p>
+    <p>📞 Phone: <a href="tel:+15551234567">+1 (555) 123-4567</a> (24/7 Pet Helpline)</p>
+    <p>📍 Address: 123 Pet Lane, Pawville, PV 90210, United States</p>
+    <p>✉️ Email: hello@kuddlenest.com | 🕒 Mon-Sat: 9am - 8pm | Sun: 10am - 4pm</p>
+    <p style="margin-top: 1rem; font-size: 0.8rem;">© 2025 Kuddle Companion Nest — Every nest deserves a kuddle 🐶🐱</p>
+</footer>
+
+<!-- Simple JavaScript for form handling (show confirmation without actual backend) -->
+<script>
+    (function() {
+        const form = document.getElementById('contactForm');
+        const feedbackDiv = document.getElementById('formFeedback');
+
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const nameInput = document.getElementById('fullname');
+                const emailInput = document.getElementById('email');
+                const subjectInput = document.getElementById('subject');
+                const messageInput = document.getElementById('message');
+
+                if (!nameInput.value.trim() || !emailInput.value.trim() || !subjectInput.value.trim() || !messageInput.value.trim()) {
+                    feedbackDiv.innerHTML = '<span style="color: #b33;">❌ Please fill all required fields (name, email, subject, message).</span>';
+                    feedbackDiv.style.marginTop = '0.8rem';
+                    return;
+                }
+
+                if (!emailInput.value.includes('@') || !emailInput.value.includes('.')) {
+                    feedbackDiv.innerHTML = '<span style="color: #b33;">📧 Please enter a valid email address.</span>';
+                    return;
+                }
+
+                // simulate success
+                feedbackDiv.innerHTML = `<span style="color: #2d6a4f; background: #e9f5e8; padding: 0.6rem 1rem; border-radius: 40px; display: inline-block;">✅ Woof! Thanks ${nameInput.value.split(' ')[0]}! Your message has been sent. Our team will reply within 24h. 🐕❤️</span>`;
+                form.reset();   // optional clear
+                setTimeout(() => {
+                    feedbackDiv.innerHTML = '';
+                }, 6000);
+            });
+        }
+    })();
+</script>
+</body>
+</html>

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Privacy Policy | Kuddle Companion Nest</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #faf3e8;
+            color: #3e2a1f;
+            line-height: 1.6;
+        }
+
+        /* Brown Theme (identical to contact/index) */
+        :root {
+            --brown-dark: #4a2c1a;
+            --brown-medium: #7a4b2c;
+            --brown-light: #c49a6c;
+            --brown-pale: #e7d6bf;
+            --cream: #fff9f0;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--brown-dark), var(--brown-medium));
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 5px solid #dbb87c;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+
+        nav {
+            background-color: var(--brown-dark);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 1rem;
+            list-style: none;
+        }
+
+        nav a {
+            color: #f7e9d7;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd966;
+            transform: scale(1.05);
+        }
+
+        .hero {
+            background-image: url('https://place-puppy.com/1200x400?text=Your+Privacy+Matters+as+Much+as+a+Paw');
+            background-size: cover;
+            background-position: center;
+            height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 6px black;
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-align: center;
+            background-color: #8b5a2b;
+            background-blend-mode: overlay;
+        }
+
+        .hero span {
+            background: rgba(0,0,0,0.6);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.3rem;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 2rem auto;
+            padding: 0 24px;
+        }
+
+        /* Policy card layout */
+        .policy-card {
+            background: var(--cream);
+            border-radius: 32px;
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.05);
+            padding: 2rem 2.2rem;
+            border: 1px solid rgba(122, 75, 44, 0.15);
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.9rem;
+            color: var(--brown-dark);
+            border-left: 7px solid var(--brown-light);
+            padding-left: 1rem;
+            margin: 1.5rem 0 1rem 0;
+            font-weight: 700;
+        }
+
+        .section-title:first-of-type {
+            margin-top: 0;
+        }
+
+        .policy-intro {
+            font-size: 1.1rem;
+            background: #f8efde;
+            padding: 1.2rem 1.8rem;
+            border-radius: 28px;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--brown-light);
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: var(--brown-medium);
+            margin: 1.2rem 0 0.6rem 0;
+            font-weight: 600;
+        }
+
+        p, li {
+            color: #3e2a1f;
+            margin-bottom: 0.75rem;
+        }
+
+        ul, ol {
+            margin: 0.75rem 0 1rem 1.8rem;
+        }
+
+        li {
+            margin-bottom: 0.4rem;
+        }
+
+        .highlight-badge {
+            background: var(--brown-pale);
+            border-radius: 40px;
+            padding: 0.2rem 1rem;
+            display: inline-block;
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: var(--brown-dark);
+            margin-right: 0.5rem;
+        }
+
+        .table-of-contents {
+            background: #fcf4e8;
+            border-radius: 28px;
+            padding: 1.2rem 1.8rem;
+            margin-bottom: 1.8rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .toc-links a {
+            color: var(--brown-dark);
+            text-decoration: none;
+            font-weight: 500;
+            background: white;
+            padding: 0.3rem 0.9rem;
+            border-radius: 40px;
+            margin: 0 0.25rem;
+            display: inline-block;
+            transition: 0.2s;
+            border: 1px solid #e2cfb5;
+        }
+
+        .toc-links a:hover {
+            background: var(--brown-light);
+            color: white;
+            border-color: var(--brown-light);
+        }
+
+        .effective-date {
+            text-align: right;
+            font-style: italic;
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e2cfb5;
+            font-size: 0.9rem;
+        }
+
+        .footer {
+            background-color: var(--brown-dark);
+            color: #f0e2d0;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 2rem;
+            border-top: 6px solid #e6bc86;
+        }
+
+        .footer p {
+            margin: 0.5rem 0;
+        }
+
+        .footer a {
+            color: #ffdd99;
+            text-decoration: none;
+        }
+
+        @media (max-width: 720px) {
+            header h1 { font-size: 1.8rem; }
+            .hero { height: 200px; font-size: 1rem; }
+            .hero span { font-size: 1rem; padding: 0.6rem 1.2rem; }
+            .section-title { font-size: 1.6rem; }
+            .policy-card { padding: 1.5rem; }
+            h3 { font-size: 1.25rem; }
+            .table-of-contents { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🐾 Kuddle Companion Nest</h1>
+    <p>Where every paw finds love, care & a cozy nest</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="terms.html">Terms Of Privacy</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="cookies.html">Cookies Policy</a>
+</nav>
+
+<div class="hero">
+    <span>🔒 Privacy is a Priority — Like a Warm Hug for Your Data 🐕</span>
+</div>
+
+<div class="container">
+    <div class="policy-card">
+        <div class="policy-intro">
+            ✨ At <strong>Kuddle Companion Nest</strong>, we treasure the trust you place in us. Whether you're seeking adoption advice, scheduling a vet visit, or just sharing photos of your furry best friend, we are committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your data when you interact with our website, services, and pet-loving community.
+        </div>
+
+        <div class="table-of-contents">
+            <span style="font-weight: bold;">📑 Quick menu:</span>
+            <div class="toc-links">
+                <a href="#infoCollect">Info we collect</a>
+                <a href="#useInfo">How we use</a>
+                <a href="#shareInfo">Sharing & disclosure</a>
+                <a href="#cookies">Cookies & tracking</a>
+                <a href="#rights">Your rights</a>
+                <a href="#security">Data security</a>
+            </div>
+        </div>
+
+        <!-- 1. Information we collect -->
+        <h2 class="section-title" id="infoCollect">🐾 1. Information We Collect</h2>
+        <p>We collect information that helps us deliver a safe, personalized, and tail-wagging experience. Categories include:</p>
+        <ul>
+            <li><span class="highlight-badge">🐕 Personal Info</span> Name, email address, phone number, postal address, and pet preferences (e.g., dog/cat parent, breed info).</li>
+            <li><span class="highlight-badge">📞 Communication Data</span> Messages you send via our contact forms, adoption inquiries, support requests, or newsletter signups.</li>
+            <li><span class="highlight-badge">💻 Technical Data</span> IP address, browser type, device identifiers, and browsing actions on our website (e.g., pages visited, clicks).</li>
+            <li><span class="highlight-badge">🏷️ Transactional Info</span> If you purchase pet supplies or make donations, we collect billing/shipping details (payment data is processed by secure third-party gateways).</li>
+            <li><span class="highlight-badge">📸 Pet-Related Information</span> Photos, health notes, or behavioral details you voluntarily share to enhance our care recommendations.</li>
+        </ul>
+
+        <!-- 2. How we use your information -->
+        <h2 class="section-title" id="useInfo">❤️ 2. How We Use Your Information</h2>
+        <p>Your data helps us build a better nest for every companion. Specifically, we may use it to:</p>
+        <ul>
+            <li>✅ Respond to your questions, schedule vet appointments, or process adoptions.</li>
+            <li>✅ Send service notifications, appointment reminders, and safety alerts related to your pet.</li>
+            <li>✅ Improve our website, develop new pet-care resources, and personalize content (e.g., breed-specific tips).</li>
+            <li>✅ Process donations, orders for pet supplies, and event registrations.</li>
+            <li>✅ With your consent, share newsletters, exclusive offers, and community stories (you may opt out anytime).</li>
+            <li>✅ Prevent fraud, ensure website security, and comply with legal obligations.</li>
+        </ul>
+
+        <!-- 3. Sharing & Disclosure -->
+        <h2 class="section-title" id="shareInfo">🤝 3. Sharing & Disclosure of Information</h2>
+        <p>We never sell your personal information. However, limited sharing occurs only in these circumstances:</p>
+        <ul>
+            <li><strong>🐾 Service Providers:</strong> Trusted partners who help operate our platform (e.g., hosting, email delivery, payment processing, veterinary telehealth) – they are contractually obligated to protect your data.</li>
+            <li><strong>🐶 Legal Requirements:</strong> If required by law, court order, or to protect the rights, property, or safety of Kuddle Companion Nest, our users, or the public.</li>
+            <li><strong>🏡 Business Transfers:</strong> In the event of a merger, acquisition, or asset sale, your information may be transferred with notice.</li>
+            <li><strong>📢 With Your Explicit Consent:</strong> For any other purpose when you give us permission.</li>
+        </ul>
+        <p>We may also share aggregated, anonymized data for research or marketing — this never identifies you personally.</p>
+
+        <!-- 4. Cookies & Tracking Technologies -->
+        <h2 class="section-title" id="cookies">🍪 4. Cookies & Similar Technologies</h2>
+        <p>We use cookies (small text files) and similar trackers to enhance your experience on our website. These help us remember preferences, understand site usage, and show relevant pet-care content. You can manage cookie preferences via your browser settings. For more details, please see our separate <a href="cookies.html" style="color: #7a4b2c; text-decoration: underline;">Cookie Policy</a>. Essential cookies cannot be disabled as they ensure site functionality (e.g., forms and security).</p>
+        
+        <!-- 5. Your Privacy Rights -->
+        <h2 class="section-title" id="rights">📜 5. Your Rights & Choices</h2>
+        <p>Depending on your location (including GDPR for EU/EEA, CCPA for California residents), you may have the following rights regarding your personal information:</p>
+        <ul>
+            <li>🔍 <strong>Access:</strong> Request a copy of the data we hold about you.</li>
+            <li>✏️ <strong>Correction:</strong> Update or rectify inaccurate information.</li>
+            <li>🗑️ <strong>Deletion:</strong> Request erasure of your data (subject to legal obligations).</li>
+            <li>⚙️ <strong>Restrict Processing:</strong> Limit how we use your data in certain circumstances.</li>
+            <li>📤 <strong>Data Portability:</strong> Receive a structured, machine-readable copy of your data.</li>
+            <li>🚫 <strong>Opt-Out of Marketing:</strong> Unsubscribe from promotional emails via the “unsubscribe” link or by contacting us.</li>
+        </ul>
+        <p>To exercise any of these rights, please email us at <strong>privacy@kuddlenest.com</strong> or call our Pet Data Helpline at <strong>+1 (555) 123-4567</strong>. We will respond within 30 days. No discrimination will occur for exercising your privacy rights.</p>
+
+        <!-- 6. Data Security & Retention -->
+        <h2 class="section-title" id="security">🛡️ 6. Data Security & Retention</h2>
+        <p>We implement industry-standard safeguards including encryption (SSL/TLS), access controls, regular security audits, and employee training. While no system is 100% secure, we strive to protect your personal information from unauthorized access, disclosure, alteration, or destruction. We retain your data only as long as necessary to fulfill the purposes outlined in this policy, comply with legal obligations, resolve disputes, and enforce agreements. Typically, contact information is kept for 3 years after last interaction, unless you request earlier deletion.</p>
+        <p>In the unfortunate event of a data breach, we will notify affected users and relevant authorities as required by law.</p>
+
+        <!-- 7. Children’s Privacy -->
+        <h2 class="section-title">🧸 7. Children’s Privacy</h2>
+        <p>Our services are intended for pet owners and animal lovers of all ages, but we do not knowingly collect personal information from children under 13 without verifiable parental consent. If you believe a child has provided us with personal data, please contact us immediately, and we will take steps to delete such information.</p>
+
+        <!-- 8. Third-Party Links -->
+        <h2 class="section-title">🔗 8. Third-Party Links & Features</h2>
+        <p>Our website may contain links to external sites (e.g., veterinary partners, pet supply brands, animal welfare organizations). We are not responsible for the privacy practices or content of those third parties. We encourage you to read their privacy policies before sharing any personal information.</p>
+
+        <!-- 9. International Data Transfers -->
+        <h2 class="section-title">🌎 9. International Transfers</h2>
+        <p>Kuddle Companion Nest is based in the United States. If you access our services from outside the US, your information may be transferred to, stored, and processed in the US. By using our website, you consent to this transfer. We ensure appropriate safeguards (e.g., Standard Contractual Clauses) are in place for data originating from the European Economic Area.</p>
+
+        <!-- 10. Updates to this Policy -->
+        <h2 class="section-title">📅 10. Changes to This Privacy Policy</h2>
+        <p>We may update this policy from time to time to reflect legal, operational, or technical changes. The “Last Updated” date at the bottom indicates when the latest revision was made. We will notify you of material changes via email or a prominent notice on our website before they become effective. Your continued use of our services after the update constitutes acceptance of the revised policy.</p>
+
+        <div class="effective-date">
+            ✅ Last Updated: April 15, 2025 | Effective as of: May 1, 2025<br>
+            🐕 <strong>Kuddle Companion Nest</strong> — For any privacy questions, contact our Data Protection Officer: dpo@kuddlenest.com
+        </div>
+
+        <!-- Additional contact + reassurance section (matches contact page vibe) -->
+        <div style="margin-top: 2rem; background: #f7ede1; border-radius: 28px; padding: 1.2rem 1.5rem; text-align: center;">
+            <p style="font-weight: 500;">⭐ We believe in transparency & trust — your furry family's data is treated with the same care as our nest's residents.</p>
+            <p style="font-size: 0.9rem;">📞 Privacy-related requests? Call us at <strong>+1 (555) 123-4567</strong> (Mon-Fri 9am-5pm ET) or email <strong>privacy@kuddlenest.com</strong></p>
+        </div>
+    </div>
+
+    <!-- extra consistent info: similar to map/faq but privacy-focused reassurance -->
+    <div class="policy-card" style="background: #fcf7ef;">
+        <h2 class="section-title">🛡️ Your Trust, Our Commitment</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-between;">
+            <div style="flex:1; min-width: 180px;">
+                <h3 style="margin-top: 0;">🐾 No Data Sales</h3>
+                <p>We will never sell your personal information to third parties. Your trust is at the core of our mission.</p>
+            </div>
+            <div style="flex:1; min-width: 180px;">
+                <h3 style="margin-top: 0;">🔐 GDPR & CCPA Ready</h3>
+                <p>We comply with global privacy frameworks, offering data subject rights to all users regardless of location.</p>
+            </div>
+            <div style="flex:1; min-width: 180px;">
+                <h3 style="margin-top: 0;">📧 Easy Opt-Out</h3>
+                <p>Unsubscribe from newsletters with one click, or manage cookie preferences via our cookie banner.</p>
+            </div>
+        </div>
+        <p style="margin-top: 1.2rem; font-size: 0.9rem; border-top: 1px solid #e2cfb5; padding-top: 1rem;">✨ For more information about your rights or to submit a data request, please use our <a href="contact.html" style="color:#7a4b2c; font-weight: bold;">Contact Page</a> – we’re always here to help.</p>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>🐾 <strong>Kuddle Companion Nest</strong> — Your trusted partner in compassionate pet care</p>
+    <p>📞 Phone: <a href="tel:+15551234567">+1 (555) 123-4567</a> (24/7 Pet Helpline)</p>
+    <p>📍 Address: 123 Pet Lane, Pawville, PV 90210, United States</p>
+    <p>✉️ Email: hello@kuddlenest.com | 🕒 Mon-Sat: 9am - 8pm | Sun: 10am - 4pm</p>
+    <p style="margin-top: 1rem; font-size: 0.8rem;">© 2025 Kuddle Companion Nest — Every nest deserves a kuddle 🐶🐱 | <a href="privacy.html">Privacy Policy</a> | <a href="cookies.html">Cookies</a></p>
+</footer>
+
+<!-- optional smooth scroll for internal hash links -->
+<script>
+    document.querySelectorAll('.toc-links a, .policy-card a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if (targetId && targetId !== '#' && targetId.startsWith('#')) {
+                e.preventDefault();
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

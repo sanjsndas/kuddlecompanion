@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>About Us | Kuddle Companion Nest — Our Story & Mission</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #faf3e8;
+            color: #3e2a1f;
+            line-height: 1.6;
+        }
+
+        /* Brown Theme — matching original */
+        :root {
+            --brown-dark: #4a2c1a;
+            --brown-medium: #7a4b2c;
+            --brown-light: #c49a6c;
+            --brown-pale: #e7d6bf;
+            --cream: #fff9f0;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--brown-dark), var(--brown-medium));
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 5px solid #dbb87c;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+
+        nav {
+            background-color: var(--brown-dark);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 1rem;
+            list-style: none;
+        }
+
+        nav a {
+            color: #f7e9d7;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd966;
+            transform: scale(1.05);
+        }
+
+        .hero-inner {
+            background: linear-gradient(120deg, #6b3f1c, #936e48);
+            padding: 3rem 2rem;
+            text-align: center;
+            color: white;
+            border-bottom: 4px solid #ecc897;
+        }
+
+        .hero-inner h2 {
+            font-size: 2.5rem;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+        }
+
+        .hero-inner p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 1rem auto 0;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 2rem auto;
+            padding: 0 24px;
+        }
+
+        /* content blocks same as original but enriched */
+        .content-block {
+            background: var(--cream);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 28px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            border-left: 8px solid var(--brown-light);
+            transition: transform 0.2s ease;
+        }
+
+        .content-block:hover {
+            transform: translateY(-3px);
+        }
+
+        .content-block h2 {
+            color: var(--brown-dark);
+            margin-bottom: 1rem;
+            font-size: 1.9rem;
+            border-left: 5px solid var(--brown-medium);
+            padding-left: 1rem;
+        }
+
+        .content-block h3 {
+            font-size: 1.4rem;
+            color: #5a3a24;
+            margin: 1.2rem 0 0.5rem;
+        }
+
+        .content-block img {
+            max-width: 100%;
+            border-radius: 24px;
+            margin: 1.5rem 0;
+            border: 3px solid var(--brown-light);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+        }
+
+        .image-row {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 1.5rem 0;
+        }
+
+        .image-row img {
+            width: 280px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 32px;
+            padding: 1.5rem;
+            text-align: center;
+            width: 220px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: all 0.2s;
+            border: 1px solid #efdfcb;
+        }
+
+        .team-card:hover {
+            background: #fff6ed;
+            transform: scale(1.02);
+        }
+
+        .team-card .avatar {
+            font-size: 4rem;
+            background: #e9dccc;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            background: #d9c2a4;
+        }
+
+        .stat-badge {
+            background: var(--brown-pale);
+            padding: 0.8rem;
+            border-radius: 50px;
+            text-align: center;
+            font-weight: bold;
+            margin: 1rem 0;
+            color: #3a2418;
+        }
+
+        .footer {
+            background-color: var(--brown-dark);
+            color: #f0e2d0;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            border-top: 6px solid #e6bc86;
+        }
+
+        .footer p {
+            margin: 0.5rem 0;
+        }
+
+        .footer a {
+            color: #ffdd99;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.8rem; }
+            .hero-inner h2 { font-size: 1.8rem; }
+            .content-block h2 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🐾 Kuddle Companion Nest</h1>
+    <p>Where every paw finds love, care & a cozy nest</p>
+</header>
+
+<nav>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="terms.html">Terms Of Privacy</a></li>
+    <li><a href="privacy.html">Privacy Policy</a></li>
+    <li><a href="cookies.html">Cookies Policy</a></li>
+</nav>
+
+<div class="hero-inner">
+    <h2>🐕‍🦺 Our journey of compassion & wagging tails</h2>
+    <p>For over a decade, Kuddle Companion Nest has been a sanctuary for pets and a trusted guide for pet parents worldwide.</p>
+</div>
+
+<div class="container">
+    <!-- BLOCK 1: Our story / foundation -->
+    <div class="content-block">
+        <h2>🏡 The Nest Story — How We Became Family</h2>
+        <div class="image-row">
+            <img src="https://place-puppy.com/400x250?text=Founder+with+Rescue+Dog" alt="Founder with rescue dog">
+            <img src="https://placekitten.com/400/250?text=Cat+Sanctuary+Moments" alt="Cat rescue moment">
+        </div>
+        <p>Kuddle Companion Nest began in 2012 from a small home-visit pet-sitting service run by veterinary technician Elena Marchetti. What started as a single mission — to provide fear-free, science-based care — grew into a global educational platform and community of 150,000+ pet lovers. The name “Kuddle Nest” reflects our core belief: every pet deserves a safe nest where they feel protected, understood, and deeply loved. We combine modern ethology, holistic wellness, and old-fashioned tenderness. Over the years, we’ve partnered with shelters, low-cost vaccine clinics, and even launched foster programs that have rehomed over 1,200 dogs and cats. Our heart beats for animals in every zip code. Today, Kuddle Companion Nest serves as an all-in-one resource for pet nutrition, behavior, medical advocacy, and emotional support — because raising a pet enriches both human and animal lives.</p>
+        <div class="stat-badge">✨ 500+ expert articles • 15k+ happy pet families • 98% recommendation rate</div>
+        <p>Our international team includes certified dog trainers, feline behaviorists, vet nutritionists, and groomers who volunteer their expertise. Unlike generic pet websites, we personally test products, interview leading researchers, and share real-life case studies. From a timid rescue greyhound learning to trust again to a senior cat with arthritis finding joy in heated beds — every story shapes our values. Transparency, empathy, and integrity are our guiding stars.</p>
+    </div>
+
+    <!-- BLOCK 2: Mission + Vision -->
+    <div class="content-block">
+        <h2>🌟 Our Mission & Vision — More Than Just Pet Care</h2>
+        <img src="https://place-puppy.com/900/350?text=Empathy+in+Action" alt="Volunteers with dogs">
+        <p><strong>🐾 Mission:</strong> Empower pet owners with compassionate, evidence-based knowledge and products so that every companion animal thrives physically, mentally, and emotionally. We aim to eliminate preventable suffering by bridging the gap between veterinary science and everyday home care.</p>
+        <p><strong>🌈 Vision:</strong> A world where no pet is surrendered due to behavioral misunderstandings, where every community has access to affordable wellness resources, and where the human-animal bond is celebrated as essential medicine. We envision 24/7 support, inclusive pet parenting guides, and low-stress handling as the global norm.</p>
+        <p>To fulfill our mission, we operate The Nest Fund: donating 5% of all profits to rescue organizations and sponsoring spay/neuter campaigns. We also offer free webinars on senior pet comfort, pet CPR, and separation anxiety. Our vision continues to expand — soon we will launch localized emergency boarding assistance for domestic violence survivors with pets.</p>
+    </div>
+
+    <!-- BLOCK 3: Meet the team (unique, warm) -->
+    <div class="content-block">
+        <h2>👥 The Hearts Behind the Nest — Meet Our Team</h2>
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="avatar">🐕</div>
+                <h3>Dr. Elena Marchetti</h3>
+                <p>Founder & DVM, Fear-Free certified</p>
+                <small>15+ years shelter medicine</small>
+            </div>
+            <div class="team-card">
+                <div class="avatar">🐈⬛</div>
+                <h3>Marcus Lin</h3>
+                <p>Feline Behavior Lead</p>
+                <small>IAABC certified cat consultant</small>
+            </div>
+            <div class="team-card">
+                <div class="avatar">🐾</div>
+                <h3>Dr. Priya Sharma</h3>
+                <p>Vet Nutritionist (ACVN)</p>
+                <small>Raw & therapeutic diets expert</small>
+            </div>
+            <div class="team-card">
+                <div class="avatar">🦴</div>
+                <h3>Connor O'Reilly</h3>
+                <p>Canine Trainer & Enrichment</p>
+                <small>CPDT-KA, trick dog champion</small>
+            </div>
+        </div>
+        <p>Our extended team includes over 30 volunteer "Nest Guides" who answer real-time questions in our community forum. Each team member shares one golden rule: respect the animal’s point of view. Weekly case reviews ensure our advice stays updated with latest welfare research. Meet us at global pet expos or join our virtual Q&A every first Tuesday.</p>
+    </div>
+
+    <!-- BLOCK 4: Our approach to care (unique philosphy) -->
+    <div class="content-block">
+        <h2>🧠 The Kuddle Compass — Science + Soul</h2>
+        <p>What makes Kuddle Companion Nest different? We don't believe in one-size-fits-all formulas. The Kuddle Compass integrates four pillars: 🩺 <strong>Preventive Wellness</strong> (regular checkups, dental, weight management), 🎓 <strong>Behavioral Harmony</strong> (force-free modification & enrichment), 🥗 <strong>Customized Nutrition</strong> (life-stage, allergy-conscious, and sustainable sourcing), 💞 <strong>Emotional Nurturing</strong> (reducing stress through pheromones, routine, and bond-based activities).</p>
+        <div class="image-row">
+            <img src="https://place-puppy.com/350/200?text=Dog+Enrichment+Session" alt="Enrichment session">
+            <img src="https://placekitten.com/350/200?text=Cat+Massage+Therapy" alt="Cat massage">
+            <img src="https://place-puppy.com/350/200?text=Senior+Pet+Wellness" alt="Senior pet exam">
+        </div>
+        <p>Every recommendation on this site — from diet transitions to toy safety — passes through our “five-paw review”: safety, efficacy, accessibility, sustainability, and joy. For controversial topics (raw diets, vaccination schedules, e-collars) we cite peer-reviewed studies and present balanced viewpoints so you can make informed choices with your veterinarian. We also curate a “Nest Approved” badge for products that meet our rigorous ethical standards. Our ultimate goal: helping you become your pet’s best advocate without guilt or overwhelm.</p>
+    </div>
+
+    <!-- BLOCK 5: Community impact & success stories -->
+    <div class="content-block">
+        <h2>🌍 Community Impact — Real Tails, Real Change</h2>
+        <p><strong>📖 Pawsitive Stories:</strong> Through our “Nest Rescue Fund,” we supported 34 animal shelters last year, providing 12,000 pounds of food, 800 vaccines, and 200 spay/neuter vouchers. One of our favorite transformations: a senior pitbull named Daisy, found with severe mange and arthritis, now thriving in a forever home after our rehab program covered her physiotherapy and pain management. Daisy became our therapy ambassador — visiting hospitals and spreading the message that every senior pet deserves a second chapter.</p>
+        <p>We also launched the "Kuddle Kids" initiative, teaching empathy through humane education in elementary schools. Over 2,000 children have learned how to read dog body language and safely interact with cats. Additionally, our free digital library — available in three languages — has over 500 downloadable checklists, from “first week with a rescue” to “disaster preparedness for pets.” These resources have been accessed over 500k times globally, reducing surrendered pets due to behavior issues by 24% in our pilot cities.</p>
+        <div class="stat-badge">🎯 2025 goal: Launch mobile wellness clinics in rural areas • double foster network capacity</div>
+        <p>Want to get involved? Donate your time or funds, or simply share our educational content. Together we build a world where no pet is left behind.</p>
+    </div>
+
+    <!-- BLOCK 6: Our promise & transparency (extra rich content) -->
+    <div class="content-block">
+        <h2>📜 The Kuddle Promise — Ethics Above Everything</h2>
+        <p>We are proudly independent: no paid endorsements or hidden affiliate bias. When we recommend a product, it's because it genuinely improves pet welfare. We publish conflict-of-interest statements annually and undergo third-party auditing for our content accuracy. All medical articles are reviewed by at least one licensed veterinarian before publication. Furthermore, we maintain a “corrections & updates” log — if new science emerges, we revise within 72 hours. Additionally, user feedback drives our evolution; each month we host open feedback sessions and publish a transparency report.</p>
+        <p>🌱 <strong>Sustainability pledge:</strong> We promote eco-friendly pet products, biodegradable waste bags, and upcycled pet beds. Our website runs on green hosting, and we offset our team's travel emissions. Because caring for pets also means caring for the planet they share with us.</p>
+        <p>We also respect your privacy (read our detailed privacy + cookie policies). No selling of data, period. Our community forum is moderated with anti-harassment protocols — we celebrate diversity of all species and families.</p>
+    </div>
+
+    <!-- BLOCK 7: What pet parents say (testimonials) -->
+    <div class="content-block">
+        <h2>❤️ Love From Our Nest — Real Reviews</h2>
+        <div class="image-row">
+            <img src="https://place-puppy.com/250/180?text=Happy+Golden" alt="client dog">
+            <img src="https://placekitten.com/250/180?text=Rescue+Cat+Happiness" alt="happy rescue cat">
+        </div>
+        <p><em>“After following Kuddle Nest’s separation anxiety protocol, my rescue dog Leo can finally stay calm when I go to work. The detailed step-by-step and the supportive community saved us from rehoming. Forever grateful!”</em> — Sarah T., Austin, TX ⭐⭐⭐⭐⭐</p>
+        <p><em>“I adopted two feral kittens and felt overwhelmed. The feline behavior team gave me personalized advice on socialization — now they are cuddle bugs! Kuddle Nest is a godsend.”</em> — Miguel R., Ontario, Canada ⭐⭐⭐⭐⭐</p>
+        <p><em>“The raw vs kibble guide helped me transition my senior cat with kidney issues to a renal-friendly wet food. My vet was impressed with my knowledge thanks to the detailed nutrition block. Highly recommended!”</em> — Dr. Jasmine L. (vet tech, Florida) ⭐⭐⭐⭐⭐</p>
+        <p>Share your story using #KuddleNestLove — each month we feature one family and donate $200 to the rescue of their choice.</p>
+    </div>
+
+    <!-- BLOCK 8: Our future & how to join us -->
+    <div class="content-block">
+        <h2>🚀 On the Horizon — Future Projects & Advocacy</h2>
+        <p>The next chapter for Kuddle Companion Nest includes launching “Nest Telehealth” — free initial chat sessions for underserved communities, as well as a scholarship program for aspiring vet professionals from underrepresented backgrounds. We’re also developing a multilingual AI chatbot trained only on positive-reinforcement and evidence-based resources. In the coming months, we will start a podcast series “Under the Kuddle Tree,” featuring heartwarming interviews with rescuers, veterinarians, and therapy animal handlers.</p>
+        <p>Want to be part of our mission? Subscribe to our newsletter (no spam, only twice a month with updates, tips, and free webinars). Volunteer as a Nest Ambassador in your local shelter, or simply spread compassionate care. Every shared article, every gentle training method you use — it all contributes to a ripple effect of kindness.</p>
+        <p>Together, we will continue to build a haven for whiskers, paws, and the humans who adore them.</p>
+        <div class="stat-badge">✨ Join 135,000+ subscribers & get a free “Pet Emergency Ready” ebook ✨</div>
+    </div>
+
+    <!-- extra unique: myth busting corner -->
+    <div class="content-block">
+        <h2>🧪 Myth Busting Corner — Science Over Superstition</h2>
+        <p><strong>❌ “A wagging tail means a happy dog.”</strong> → Not always! High, stiff wags can signal arousal or anxiety. Context matters.<br>
+        <strong>❌ “Cats are low-maintenance; they don't need play.”</strong> → False. Indoor cats need daily enrichment to prevent obesity and depression.<br>
+        <strong>❌ “Garlic prevents fleas.”</strong> → Dangerous myth — garlic is toxic to dogs and cats and can cause anemia.<br>
+        <strong>❌ “Dogs eat grass when they’re sick.”</strong> → Many dogs eat grass out of boredom or because they like the texture — it's not necessarily a sign of illness.<br>
+        At Kuddle Nest we expose these myths with cited resources, so you never risk your pet’s health on outdated beliefs.</p>
+        <p>Check our monthly webinar series “Fact Check Friday” where we dissect viral pet trends. Knowledge saves lives.</p>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>🐾 <strong>Kuddle Companion Nest</strong> — Your trusted partner in compassionate pet care</p>
+    <p>📞 Phone: <a href="tel:+15551234567">+1 (555) 123-4567</a> (24/7 Pet Helpline)</p>
+    <p>📍 Address: 123 Pet Lane, Pawville, PV 90210, United States</p>
+    <p>✉️ Email: hello@kuddlenest.com | 🕒 Mon-Sat: 9am - 8pm | Sun: 10am - 4pm</p>
+    <p style="margin-top: 1rem; font-size: 0.8rem;">© 2025 Kuddle Companion Nest — Every nest deserves a kuddle 🐶🐱</p>
+</footer>
+
+</body>
+</html>
