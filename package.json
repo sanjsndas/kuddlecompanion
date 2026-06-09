@@ -1,8 +1,11 @@
 {
-  "name": "my-static-website",
+  "name": "threeleaders-global",
   "version": "1.0.0",
   "private": true,
+  "dependencies": {
+    "serve": "^14.2.4"
+  },
   "scripts": {
-    "start": "npx serve ."
+    "start": "serve -s . -l $PORT"
   }
 }
